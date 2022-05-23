@@ -1,5 +1,8 @@
 # Next.js + GraphQL example
 
+[![Lint General](https://github.com/JStrategia/nextjs-graphql-example/actions/workflows/lint-general.yml/badge.svg)](https://github.com/JStrategia/nextjs-graphql-example/actions/workflows/lint-general.yml)
+[![Build Frontend](https://github.com/JStrategia/nextjs-graphql-example/actions/workflows/build-frontend.yml/badge.svg)](https://github.com/JStrategia/nextjs-graphql-example/actions/workflows/build-frontend.yml)
+
 Simple [Next.js](https://v3.nuxtjs.org/) and [Apollo](https://www.apollographql.com/) example about recipes.
 
 Made with love by [Stratéjia](https://www.stratejia.ca/).
