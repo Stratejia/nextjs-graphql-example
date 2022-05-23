@@ -6,9 +6,19 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "prepare": "husky install"
+    "lint:staged": "lint-staged",
+    "prepare": "husky install",
+    "prettier": "prettier .",
+    "prettier:write": "prettier . --write"
   },
   "devDependencies": {
-    "husky": "^7.0.0"
+    "husky": "^7.0.0",
+    "lint-staged": "^12.4.1",
+    "prettier": "^2.6.2"
+  },
+  "lint-staged": {
+    "*.{md,yml,yaml,json}": [
+      "prettier . --write"
+    ]
   }
 }

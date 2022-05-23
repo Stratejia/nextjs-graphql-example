@@ -24,8 +24,8 @@ Milestones represent release versions. We use [Semanting Versioning 2.0.0](https
 
 ### Project board
 
-Issues must be placed on the [project board](https://github.com/orgs/JStrategia/projects/2/views/1). There are 5 columns in
-this board :
+Issues must be placed on the [project board](https://github.com/orgs/JStrategia/projects/2/views/1). There are 5 columns
+in this board :
 
 - To groom : Issues not yet marked as "To do"
 - To do : Issues that must be done to deliver the current iteration
@@ -95,4 +95,5 @@ converted to an actual issue.
 
 ## Contributors
 
-- Fabien Roy ([froy-at-stratejia](https://github.com/froy-at-stratejia) and [ExiledNarwal28](https://github.com/ExiledNarwal28))
+- Fabien Roy ([froy-at-stratejia](https://github.com/froy-at-stratejia) and
+  [ExiledNarwal28](https://github.com/ExiledNarwal28))
