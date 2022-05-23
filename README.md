@@ -12,7 +12,14 @@ Check the [project board](https://github.com/orgs/Rock-n-Prog/projects/1) for wh
 To contribute, make sure you have read the [docs](https://jstrategia.github.io/nextjs-graphql-example) and
 [contribution guide](CONTRIBUTING.md).
 
-## Setup
+## Setup (Docker env)
+
+```bash
+docker compose up # all services
+docker compose up frontend # example, to only start frontend
+```
+
+## Setup (local env)
 
 For specific package setup, see their respective `README.md` files.
 
