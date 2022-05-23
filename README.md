@@ -14,7 +14,7 @@ To contribute, make sure you have read the [docs](https://jstrategia.github.io/n
 
 ## Setup
 
-True for all packages (`frontend`, currently the only package).
+For specific package setup, see their respective `README.md` files.
 
 ### Install dependencies
 
@@ -24,31 +24,9 @@ yarn
 
 ## Available scripts
 
-### Start development server
-
-Frontend starts on [http://localhost:3000](http://localhost:3000)
-
-```bash
-yarn dev
-```
-
-### Build production app
-
-```bash
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-yarn preview
-```
-
 ### Lint app
 
 ```bash
-yarn lint
-yarn lint:fix # Fix code style using eslint
 yarn lint:staged # Run code style fix on staged files
 
 yarn prettier
