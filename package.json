@@ -1,0 +1,14 @@
+{
+  "name": "@stratejia/nextjs-graphql-example",
+  "version": "0.1.0",
+  "description": "Next.js + GraphQL example",
+  "author": "Fabien Roy (on behalf of Stratéjia) <froy@stratejia.ca> (https://www.stratejia.ca/)",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^7.0.0"
+  }
+}
