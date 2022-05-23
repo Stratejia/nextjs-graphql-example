@@ -15,6 +15,12 @@ To contribute, make sure you have read the [docs](https://jstrategia.github.io/n
 ## Setup (Docker env)
 
 ```bash
+# Build apps
+docker compose build # all services
+docker compose build --no-cache # to force rebuild
+docker compose build frontend # example, to only build frontend
+
+# Run apps
 docker compose up # all services
 docker compose up frontend # example, to only start frontend
 ```
