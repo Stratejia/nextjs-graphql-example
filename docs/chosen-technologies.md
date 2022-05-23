@@ -13,6 +13,11 @@ Here's what we decided to use.
 - [React](https://reactjs.org/)
 - [Apollo GraphQL](https://www.apollographql.com/)
 
+## App containers
+
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
 ## Package manager
 
 - [Yarn](https://yarnpkg.com/)
