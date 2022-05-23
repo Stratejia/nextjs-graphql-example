@@ -68,6 +68,17 @@ type AccountRepository = {
 }
 ```
 
+Even better, when you don't need multiple implementations:
+```ts
+function makeAccountRepository() {
+  function getAccounts() {
+    return [];
+  }
+}
+
+type AccountRepository = ReturnType<typeof makeAccountRepository>;
+```
+
 ### No arrow functions
 
 Supported by linter: **NO** (this might help: https://mysticatea.github.io/eslint-plugin-es/rules/no-arrow-functions.html)
