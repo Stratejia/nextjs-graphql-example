@@ -1,14 +1,6 @@
-# Style Guide
+# TypeScript
 
-General style guide for this project.
-
-This style guide is bound to be changed over time and suggestions are always welcome!
-
-Everything here should be supported by linters. Otherwise, create an issue.
-
-## TypeScript
-
-### No. Damn. Classes.
+## No. Damn. Classes.
 
 Supported by linter: **NO**
 
@@ -50,7 +42,7 @@ const accountService = makeAccountService(accountRepository);
 const accounts = await accountService.getAccounts();
 ```
 
-### Prefer types to interfaces
+## Prefer types to interfaces
 
 Supported by linter: **NO**
 
@@ -86,7 +78,7 @@ function makeAccountRepository() {
 type AccountRepository = ReturnType<typeof makeAccountRepository>;
 ```
 
-### No arrow functions
+## No arrow functions
 
 Supported by linter: **NO** ([might help](
 https://mysticatea.github.io/eslint-plugin-es/rules/no-arrow-functions.html))
@@ -108,7 +100,7 @@ function double(a: number) {
 }
 ```
 
-### No function return types
+## No function return types
 
 Supported by linter: **NO**
 
@@ -133,7 +125,7 @@ function getAccounts() {
 }
 ```
 
-### Wrap multiple params in a type
+## Wrap multiple params in a type
 
 Supported by linter: **NO**
 
@@ -171,7 +163,7 @@ function getAccountUri({ baseUrl, accountId }: GetAccountUriParams) {
 const accountUri = getAccountUri({ baseUrl: 'https://example.com', accountId: '123' });
 ```
 
-### Imports first, exports last
+## Imports first, exports last
 
 Supported by linter: **NO** ([might help](
 https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/exports-last.md))
@@ -215,76 +207,29 @@ const Container = styled.div`
 export default AccountPage;
 ```
 
-## Styling
-
-### Use $ with custom props
+## Avoid state mutation
 
 Supported by linter: **NO**
 
-When using styled-components, specify custom props with a `$` sign. This makes those props easy to spot and never
-override an existing styled-components injected prop.
+Always make sure not to mutate the state without re-creating it. Best example is mutating function params. Remember to
+always return the new value.
 
 Incorrect:
 
 ```ts
-const Container = styled.div<{ active: boolean }>(
-  ({ theme, active }) => css`
-    border: ${theme.spacing.xs} solid ${active ? theme.colors.border.high : theme.colors.primary};
-  `,
-);
+function updateFirstName({ account, firstName }: UpdateFirstNameParams) {
+  account.firstName = firstName;
+  return account;
+}
 ```
 
 Correct:
 
 ```ts
-const Container = styled.div<{ $active: boolean }>(
-  ({ theme, $active }) => css`
-    border: ${theme.spacing.xs} solid ${$active ? theme.colors.border.high : theme.colors.primary};
-  `,
-);
-```
-
-### Inject params once
-
-Supported by linter: **NO**
-
-When using styled-components, always inject params only once, except when used a single time.
-
-Incorrect:
-
-```ts
-const Container = styled.div`
-  border: ${props => props.theme.spacing.xs} solid ${props => props.theme.colors.border.high};
-`;
-```
-
-```ts
-const Container = styled.div<{ $active: boolean }>`
-  border: ${props => props.theme.spacing.xs} solid ${props => props.$active ? props.theme.colors.border.high : props.theme.colors.primary};
-`;
-```
-
-Correct:
-
-```ts
-// Single usage, this is okay
-const Container = styled.div`
-  color: ${props => props.theme.colors.font.default};
-`;
-```
-
-```ts
-const Container = styled.div(
-  ({ theme }) => css`
-    border: ${theme.spacing.xs} solid ${theme.colors.border.high};
-  `,
-);
-```
-
-```ts
-const Container = styled.div<{ $active: boolean }>(
-  ({ theme, $active }) => css`
-    border: ${theme.spacing.xs} solid ${$active ? theme.colors.border.high : theme.colors.primary};
-  `,
-);
+function updateFirstName({ account, firstName }: UpdateFirstNameParams) {
+  return {
+    ...account, // Shallow copy, used as an example
+    firstName,
+  };
+}
 ```
