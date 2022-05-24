@@ -2,6 +2,8 @@
 
 General style guide for this project.
 
+This style guide is bound to be changed over time and suggestions are always welcome!
+
 Everything here should be supported by linters. Otherwise, create an issue.
 
 ## TypeScript
@@ -86,8 +88,8 @@ type AccountRepository = ReturnType<typeof makeAccountRepository>;
 
 ### No arrow functions
 
-Supported by linter: **NO** (this might help:
-https://mysticatea.github.io/eslint-plugin-es/rules/no-arrow-functions.html)
+Supported by linter: **NO** ([might help](
+https://mysticatea.github.io/eslint-plugin-es/rules/no-arrow-functions.html))
 
 Arrow functions can bring confusion, it's hard to see what is a value and what is a function. To avoid this situation,
 always use `function`.
@@ -131,10 +133,48 @@ function getAccounts() {
 }
 ```
 
+### Wrap multiple params in a type
+
+Supported by linter: **NO**
+
+For readability and usability, we prefer using a single type as function param **when the amount of params is more than one**.
+This reduces ripple effect when we want to switch around params placement and lets the function user decide in which order
+params are sent (defined in type). This also reduces the amount of param type definition from n (number of values) to 1
+(params type).
+
+Incorrect:
+
+```ts
+// Definition
+function getAccountUri(baseUrl: string, accountId: string) {
+  return `${baseUrl}/accounts/${accountId}`;
+}
+
+// usage
+const accountUri = getAccountUri('https://example.com', '123');
+```
+
+Correct:
+
+```ts
+// Definition
+type GetAccountUriParams = {
+  baseUrl: string;
+  accountId: string;
+}
+
+function getAccountUri({ baseUrl, accountId }: GetAccountUriParams) {
+  return `${baseUrl}/accounts/${accountId}`;
+}
+
+// usage
+const accountUri = getAccountUri({ baseUrl: 'https://example.com', accountId: '123' });
+```
+
 ### Imports first, exports last
 
-Supported by linter: **NO** (this might help:
-https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/exports-last.md)
+Supported by linter: **NO** ([might help](
+https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/exports-last.md))
 
 We should read script files (including JS/TS) as functions, with params (imports) and returned values (exports). This
 means files should always before with imports and end with exports.
@@ -157,7 +197,7 @@ const Container = styled.div`
 `;
 ```
 
-Incorrect:
+Correct:
 
 ```tsx
 import { useState } from 'react';
@@ -173,4 +213,78 @@ const Container = styled.div`
 `;
 
 export default AccountPage;
+```
+
+## Styling
+
+### Use $ with custom props
+
+Supported by linter: **NO**
+
+When using styled-components, specify custom props with a `$` sign. This makes those props easy to spot and never
+override an existing styled-components injected prop.
+
+Incorrect:
+
+```ts
+const Container = styled.div<{ active: boolean }>(
+  ({ theme, active }) => css`
+    border: ${theme.spacing.xs} solid ${active ? theme.colors.border.high : theme.colors.primary};
+  `,
+);
+```
+
+Correct:
+
+```ts
+const Container = styled.div<{ $active: boolean }>(
+  ({ theme, $active }) => css`
+    border: ${theme.spacing.xs} solid ${$active ? theme.colors.border.high : theme.colors.primary};
+  `,
+);
+```
+
+### Inject params once
+
+Supported by linter: **NO**
+
+When using styled-components, always inject params only once, except when used a single time.
+
+Incorrect:
+
+```ts
+const Container = styled.div`
+  border: ${props => props.theme.spacing.xs} solid ${props => props.theme.colors.border.high};
+`;
+```
+
+```ts
+const Container = styled.div<{ $active: boolean }>`
+  border: ${props => props.theme.spacing.xs} solid ${props => props.$active ? props.theme.colors.border.high : props.theme.colors.primary};
+`;
+```
+
+Correct:
+
+```ts
+// Single usage, this is okay
+const Container = styled.div`
+  color: ${props => props.theme.colors.font.default};
+`;
+```
+
+```ts
+const Container = styled.div(
+  ({ theme }) => css`
+    border: ${theme.spacing.xs} solid ${theme.colors.border.high};
+  `,
+);
+```
+
+```ts
+const Container = styled.div<{ $active: boolean }>(
+  ({ theme, $active }) => css`
+    border: ${theme.spacing.xs} solid ${$active ? theme.colors.border.high : theme.colors.primary};
+  `,
+);
 ```
