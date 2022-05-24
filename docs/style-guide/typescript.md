@@ -142,7 +142,7 @@ function getAccountUri(baseUrl: string, accountId: string) {
   return `${baseUrl}/accounts/${accountId}`;
 }
 
-// usage
+// Usage
 const accountUri = getAccountUri('https://example.com', '123');
 ```
 
@@ -159,7 +159,7 @@ function getAccountUri({ baseUrl, accountId }: GetAccountUriParams) {
   return `${baseUrl}/accounts/${accountId}`;
 }
 
-// usage
+// Usage
 const accountUri = getAccountUri({ baseUrl: 'https://example.com', accountId: '123' });
 ```
 
