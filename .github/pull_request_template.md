@@ -1,7 +1,7 @@
 ### Before contributing
 
 Please make sure you have read the
-[contribution guide](https://github.com/JStrategia/nextjs-graphql-example/blob/docs/main/CONTRIBUTING.md).
+[contribution guide](https://github.com/Stratejia/nextjs-graphql-example/blob/docs/main/CONTRIBUTING.md).
 
 ### Description
 

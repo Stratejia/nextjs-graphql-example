@@ -2,7 +2,7 @@
 
 **Contributions are welcome!**
 
-Don't forget to read the [docs](https://jstrategia.github.io/nextjs-graphql-example)!
+Don't forget to read the [docs](https://stratejia.github.io/nextjs-graphql-example)!
 
 ## Code of conduct
 
@@ -10,7 +10,7 @@ Before contributing to the project, please read our [code of conduct](CODE_OF_CO
 
 ## Task tracking
 
-Task tracking uses the [project board](https://github.com/orgs/JStrategia/projects/2/views/1).
+Task tracking uses the [project board](https://github.com/orgs/Stratejia/projects/2/views/1).
 
 ### Functionnalities to implement
 
@@ -24,7 +24,7 @@ Milestones represent release versions. We use [Semanting Versioning 2.0.0](https
 
 ### Project board
 
-Issues must be placed on the [project board](https://github.com/orgs/JStrategia/projects/2/views/1). There are 5 columns
+Issues must be placed on the [project board](https://github.com/orgs/Stratejia/projects/2/views/1). There are 5 columns
 in this board :
 
 - To groom : Issues not yet marked as "To do"
