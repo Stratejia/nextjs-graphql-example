@@ -341,5 +341,5 @@ Correct:
 ```ts
 return account.hasPlan
     ? createBillingResponseForPlan(account.plan)
-    : createBillingResponseForAccount(account);
+    : createBillingResponseForAccount(account); // In this example, we'd throw an error on a condition in this function
 ```
