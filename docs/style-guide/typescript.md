@@ -233,3 +233,113 @@ function updateFirstName({ account, firstName }: UpdateFirstNameParams) {
   };
 }
 ```
+
+## No inverted if statement
+
+Supported by linter: **NO**
+
+In an `if/else` statement, we want to avoid having a negation as the main condition. This helps the readability of our
+code. Instead, we want to have a positive condition for the `if` and let the negation be part of the `else` statement.
+
+It's okay to have negated arguments in a simple `if` statement when there is no `else`.
+
+Incorrect:
+
+```ts
+if (!account.hasPlan) {
+  // Logic if account has no plan
+} else {
+  // Logic if account has plan
+}
+```
+
+Correct:
+
+```ts
+if (account.hasPlan) {
+  // Logic if account has plan
+} else {
+  // Logic if account has no plan
+}
+```
+
+```ts
+// This is okay, since there is no else statement
+if (!account.hasPlan) {
+  // Logic if account has no plan
+}
+```
+
+## No unnecessary else statement
+
+Supported by linter: **NO**
+
+In the case of a returned value, it is unnecessary to return in an else statement when the if statement returns.
+
+Incorrect:
+
+```ts
+if (account.hasPlan) {
+  return createBillForPlan(account.plan);
+} else {
+  return createBillForAccount(account);
+}
+```
+
+Correct:
+
+```ts
+if (account.hasPlan) {
+  return createBillForPlan(account);
+}
+
+return createBillForAccount(account);
+```
+
+```ts
+// Even better
+return account.hasPlan ? createBillForPlan(account) : createBillForAccount(account);
+```
+
+## No complex ternary if statement
+
+Supported by linter: **NO**
+
+Ternary if statements are nice, but they can get overly complicated. This can occur when they hold much logic or when
+they are chained together.
+
+Incorrect:
+
+```ts
+return account.hasPlan
+    ? {
+      plan: account.plan,
+      something,
+      metadata: {
+        whatever,
+      },
+    }
+    : {
+      account,
+      somethingElse,
+      metadata: {
+        whatever,
+      },
+    };
+```
+
+```ts
+return account.hasPlan 
+  ? createBillForPlan(account) 
+  : account.canBeBilled 
+    ? createBillForAccount(account)
+    : throw createAccountBillingError(account);
+```
+
+Correct:
+
+```ts
+return account.hasPlan
+    ? createBillingResponseForPlan(account.plan)
+    : createBillingResponseForAccount(account);
+```
