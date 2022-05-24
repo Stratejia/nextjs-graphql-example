@@ -106,6 +106,31 @@ function double(a: number) {
 }
 ```
 
+### No function return types
+
+Supported by linter: **NO**
+
+Specifying function return types often leads to imports only used for this exact reason. To avoid this, we can let
+our IDEs tell us when a function returns an unwanted type. This will also be caught be the CI when building the app.
+
+Incorrect:
+
+```ts
+import { Account } from 'types/accounts';
+
+function getAccounts(): Promise<Account[]> {
+  return [{ firstName: 'John', lastName: 'Doe' }];
+}
+```
+
+Correct:
+
+```ts
+function getAccounts() {
+  return [{ firstName: 'John', lastName: 'Doe' }];
+}
+```
+
 ### Imports first, exports last
 
 Supported by linter: **NO** (this might help:
