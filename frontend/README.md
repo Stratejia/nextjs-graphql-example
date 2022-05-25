@@ -1,4 +1,4 @@
-# Next.js + GraphQL example' frontend
+# Next.js + GraphQL example's frontend
 
 ## Setup
 
