@@ -1,5 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+echo "Linting general app"
 yarn lint:staged
+
+echo "Linting frontend"
 cd frontend && yarn lint:staged
