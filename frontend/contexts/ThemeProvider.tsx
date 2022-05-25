@@ -1,4 +1,4 @@
-import React, { createContext, memo, ReactNode, useMemo, useState } from 'react';
+import React, { createContext, ReactNode, useMemo, useState } from 'react';
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components';
 import { ThemeMode } from '../types/styles';
 import { getTheme, GlobalStyle } from '../styles';
@@ -34,6 +34,6 @@ const ThemeContext = createContext<{
   switchMode: () => void;
 }>({ mode: defaultMode, setMode: () => void 0, switchMode: () => void 0 });
 
-export default memo(ThemeProvider);
+export default ThemeProvider;
 
 export { ThemeContext };
