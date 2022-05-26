@@ -1,6 +1,9 @@
+const storiesDirectories = 'components|pages';
+const storiesExtensions = 'mdx|tsx';
+
 // TODO: Lint should keep one item per line in arrays
 module.exports = {
-  stories: ['../components/**/*.stories.mdx', '../components/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: [`../@(${storiesDirectories})/**/*.stories.@(${storiesExtensions})`],
   addons: ['@storybook/addon-essentials', '@storybook/addon-links', '@storybook/addon-interactions'],
   framework: '@storybook/react',
   core: {
