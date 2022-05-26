@@ -3,7 +3,7 @@ import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-component
 import { ThemeMode } from '../types/styles';
 import { getTheme, GlobalStyle } from '../styles';
 
-const defaultMode = 'light';
+const defaultMode = 'dark';
 
 type Props = {
   children: ReactNode;
@@ -36,5 +36,4 @@ const ThemeContext = createContext<{
 }>({ mode: defaultMode, setMode: () => void 0, switchMode: () => void 0 });
 
 export default ThemeProvider;
-
-export { ThemeContext };
+export { defaultMode, ThemeContext };
