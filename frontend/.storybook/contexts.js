@@ -1,19 +1,18 @@
-import ThemeProvider, { defaultMode } from '../contexts/ThemeProvider';
+import { ThemeProvider } from 'styled-components';
+import { defaultMode } from '../contexts/ThemeProvider';
+import { getTheme } from '../styles';
 
-// TODO: Weirdly, theme isn't re-applied to global styles nor story components
 const contexts = [
   {
     icon: 'box',
     title: 'Theme',
     components: [ThemeProvider],
     params: [
-      { name: 'Light', props: { initialMode: 'light' }, default: defaultMode === 'light' },
-      { name: 'Dark', props: { initialMode: 'dark' }, default: defaultMode === 'dark' },
+      { name: 'Light', props: { theme: getTheme('light') }, default: defaultMode === 'light' },
+      { name: 'Dark', props: { theme: getTheme('dark') }, default: defaultMode === 'dark' },
     ],
     options: {
       deep: true,
-      disable: false,
-      cancelable: false,
     },
   },
 ];

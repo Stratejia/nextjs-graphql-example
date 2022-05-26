@@ -1,6 +1,7 @@
 import React from 'react';
 import { withContexts } from '@storybook/addon-contexts/react';
 import { contexts } from './contexts';
+import { GlobalStyle } from '../styles';
 
 const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -12,6 +13,14 @@ const parameters = {
   },
 };
 
-const decorators = [withContexts(contexts)];
+const decorators = [
+  Story => (
+    <>
+      <GlobalStyle />
+      <Story />
+    </>
+  ),
+  withContexts(contexts),
+];
 
 export { parameters, decorators };
