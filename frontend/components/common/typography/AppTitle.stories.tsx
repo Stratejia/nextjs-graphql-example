@@ -5,10 +5,16 @@ const config = {
   component: AppTitle,
 };
 
-function Basic() {
-  // TODO: Title as var
-  return <AppTitle>App title</AppTitle>;
+function Template({ ...args }) {
+  return <AppTitle {...args} />;
 }
+
+const Basic = Template.bind({});
+// TODO: Find a way to remove ts-ignore in stories
+// @ts-ignore
+Basic.args = {
+  children: 'App title',
+};
 
 export default config;
 export { Basic };
