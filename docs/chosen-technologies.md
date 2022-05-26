@@ -35,6 +35,7 @@ Here's what we decided to use.
 ## Documentation
 
 - [Jekyll](https://jekyllrb.com/)
+- [Storybook](https://storybook.js.org/)
 
 ## Code hosting
 
