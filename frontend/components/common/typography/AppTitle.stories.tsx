@@ -9,9 +9,7 @@ function Template({ ...args }) {
   return <AppTitle {...args} />;
 }
 
-const Basic = Template.bind({});
-// TODO: Find a way to remove ts-ignore in stories
-// @ts-ignore
+const Basic = Template.bind({}) as any;
 Basic.args = {
   children: 'App title',
 };

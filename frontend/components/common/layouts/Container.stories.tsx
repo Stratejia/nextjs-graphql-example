@@ -23,9 +23,7 @@ function Template({ children: { style } }: TemplateProps) {
   );
 }
 
-const Basic = Template.bind({});
-// TODO: Find a way to remove ts-ignore in stories
-// @ts-ignore
+const Basic = Template.bind({}) as any;
 Basic.args = {
   children: {
     style: {
