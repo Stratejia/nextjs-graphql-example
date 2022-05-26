@@ -3,14 +3,15 @@ import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-component
 import { ThemeMode } from '../types/styles';
 import { getTheme, GlobalStyle } from '../styles';
 
-const defaultMode = 'light';
+const defaultMode = 'dark';
 
 type Props = {
   children: ReactNode;
+  initialMode?: ThemeMode;
 };
 
-function ThemeProvider({ children }: Props) {
-  const [mode, setMode] = useState<ThemeMode>(defaultMode);
+function ThemeProvider({ children, initialMode = defaultMode }: Props) {
+  const [mode, setMode] = useState<ThemeMode>(initialMode);
 
   const theme = useMemo(() => getTheme(mode), [mode]);
 
@@ -35,5 +36,4 @@ const ThemeContext = createContext<{
 }>({ mode: defaultMode, setMode: () => void 0, switchMode: () => void 0 });
 
 export default ThemeProvider;
-
-export { ThemeContext };
+export { defaultMode, ThemeContext };

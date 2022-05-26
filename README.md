@@ -8,7 +8,9 @@ Simple [Next.js](https://v3.nuxtjs.org/) and [Apollo](https://www.apollographql.
 
 Made with love by [Stratéjia](https://www.stratejia.ca/).
 
-Check the [project board]([https://github.com/orgs/Rock-n-Prog/projects/1](https://github.com/orgs/Stratejia/projects/2/views/1)) for what we want to do next.
+Check the
+[project board](<[https://github.com/orgs/Rock-n-Prog/projects/1](https://github.com/orgs/Stratejia/projects/2/views/1)>)
+for what we want to do next.
 
 To contribute, make sure you have read the [docs](https://stratejia.github.io/nextjs-graphql-example) and
 [contribution guide](CONTRIBUTING.md).

@@ -43,7 +43,8 @@ const Container = styled.div`
 
 ```ts
 const Container = styled.div<{ $active: boolean }>`
-  border: ${props => props.theme.spacing.xs} solid ${props => props.$active ? props.theme.colors.border.high : props.theme.colors.primary};
+  border: ${props => props.theme.spacing.xs} solid ${props =>
+      props.$active ? props.theme.colors.border.high : props.theme.colors.primary};
 `;
 ```
 

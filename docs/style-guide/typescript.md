@@ -80,8 +80,7 @@ type AccountRepository = ReturnType<typeof makeAccountRepository>;
 
 ## No arrow functions
 
-Supported by linter: **NO** ([might help](
-https://mysticatea.github.io/eslint-plugin-es/rules/no-arrow-functions.html))
+Supported by linter: **NO** ([might help](https://mysticatea.github.io/eslint-plugin-es/rules/no-arrow-functions.html))
 
 Arrow functions can bring confusion, it's hard to see what is a value and what is a function. To avoid this situation,
 always use `function`.
@@ -104,8 +103,8 @@ function double(a: number) {
 
 Supported by linter: **NO**
 
-Specifying function return types often leads to imports only used for this exact reason. To avoid this, we can let
-our IDEs tell us when a function returns an unwanted type. This will also be caught be the CI when building the app.
+Specifying function return types often leads to imports only used for this exact reason. To avoid this, we can let our
+IDEs tell us when a function returns an unwanted type. This will also be caught be the CI when building the app.
 
 Incorrect:
 
@@ -129,10 +128,10 @@ function getAccounts() {
 
 Supported by linter: **NO**
 
-For readability and usability, we prefer using a single type as function param **when the amount of params is more than one**.
-This reduces ripple effect when we want to switch around params placement and lets the function user decide in which order
-params are sent (defined in type). This also reduces the amount of param type definition from n (number of values) to 1
-(params type).
+For readability and usability, we prefer using a single type as function param **when the amount of params is more than
+one**. This reduces ripple effect when we want to switch around params placement and lets the function user decide in
+which order params are sent (defined in type). This also reduces the amount of param type definition from n (number of
+values) to 1 (params type).
 
 Incorrect:
 
@@ -153,7 +152,7 @@ Correct:
 type GetAccountUriParams = {
   baseUrl: string;
   accountId: string;
-}
+};
 
 function getAccountUri({ baseUrl, accountId }: GetAccountUriParams) {
   return `${baseUrl}/accounts/${accountId}`;
@@ -165,8 +164,8 @@ const accountUri = getAccountUri({ baseUrl: 'https://example.com', accountId: '1
 
 ## Imports first, exports last
 
-Supported by linter: **NO** ([might help](
-https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/exports-last.md))
+Supported by linter: **NO**
+([might help](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/exports-last.md))
 
 We should read script files (including JS/TS) as functions, with params (imports) and returned values (exports). This
 means files should always before with imports and end with exports.
@@ -312,14 +311,14 @@ Incorrect:
 
 ```ts
 return account.hasPlan
-    ? {
+  ? {
       plan: account.plan,
       something,
       metadata: {
         whatever,
       },
     }
-    : {
+  : {
       account,
       somethingElse,
       metadata: {
@@ -329,9 +328,9 @@ return account.hasPlan
 ```
 
 ```ts
-return account.hasPlan 
-  ? createBillForPlan(account) 
-  : account.canBeBilled 
+return account.hasPlan
+  ? createBillForPlan(account)
+  : account.canBeBilled
     ? createBillForAccount(account)
     : throw createAccountBillingError(account);
 ```
@@ -339,7 +338,5 @@ return account.hasPlan
 Correct:
 
 ```ts
-return account.hasPlan
-    ? createBillingResponseForPlan(account.plan)
-    : createBillingResponseForAccount(account); // In this example, we'd throw an error on a condition in this function
+return account.hasPlan ? createBillingResponseForPlan(account.plan) : createBillingResponseForAccount(account); // In this example, we'd throw an error on a condition in this function
 ```
