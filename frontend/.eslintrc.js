@@ -1,4 +1,4 @@
 module.exports = {
-  extends: ['next/core-web-vitals', 'plugin:storybook/recommended'],
+  extends: ['../.eslintrc.base.js', 'next/core-web-vitals', 'plugin:storybook/recommended'],
   plugins: ['prettier'],
 };
