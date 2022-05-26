@@ -1,4 +1,4 @@
-import { Page } from '../../../../components/common/layouts';
+import Page from '../../../../components/common/layouts/Page';
 
 const config = {
   title: 'Components/Layouts/Page',

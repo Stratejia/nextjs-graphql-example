@@ -1,4 +1,4 @@
-import React, { memo, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 import Container from './Container';
 
@@ -20,4 +20,4 @@ const ContentContainer = styled.div(
   `,
 );
 
-export default memo(Page);
+export default Page;

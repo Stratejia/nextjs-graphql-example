@@ -1,4 +1,4 @@
-import { Body1 } from '../../../components/common/typography';
+import Body1 from '../../../../components/common/typography/Body1';
 
 const config = {
   title: 'Components/Typography/Body1',

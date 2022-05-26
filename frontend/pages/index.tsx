@@ -1,23 +1,38 @@
 import Head from 'next/head';
-import { Page } from '../components/common/layouts';
-import { AppTitle, Body1 } from '../components/common/typography';
+import { useTranslation } from 'next-i18next';
+import Page from '../components/common/layouts/Page';
+import AppTitle from '../components/common/typography/AppTitle';
+import Body1 from '../components/common/typography/Body1';
+import { Locale } from '../types/i18n';
+import getServerSideTranslations from '../utils/getServerSideTranslations';
 
 function Home() {
+  const { t } = useTranslation('home');
+
   return (
     <Page>
       <Head>
-        <title>Next.js + GraphQL example</title>
-        <meta name="description" content="Next.js and Apollo GraphQL example made by Stratéjia" />
+        <title>{t('nextJsGqlExample')}</title>
+        <meta name="description" content={t('nextJsGqlExampleMadeByStratejia')} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <AppTitle>Next Recipes</AppTitle>
+        <AppTitle>{t('nextRecipes')}</AppTitle>
 
-        <Body1>A website about recipes (obviously under construction)</Body1>
+        <Body1>{t('websiteAboutRecipes')}</Body1>
       </main>
     </Page>
   );
 }
 
+async function getStaticProps({ locale }: { locale: Locale }) {
+  return {
+    props: {
+      ...(await getServerSideTranslations({ locale, namespaces: ['home'] })),
+    },
+  };
+}
+
 export default Home;
+export { getStaticProps };
