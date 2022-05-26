@@ -1,5 +1,6 @@
 import React from 'react';
-import ThemeProvider from '../contexts/ThemeProvider';
+import { withContexts } from '@storybook/addon-contexts/react';
+import { contexts } from './contexts';
 
 const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -11,13 +12,6 @@ const parameters = {
   },
 };
 
-// TODO: Find a way to switch theme easily
-const decorators = [
-  Story => (
-    <ThemeProvider>
-      <Story />
-    </ThemeProvider>
-  ),
-];
+const decorators = [withContexts(contexts)];
 
 export { parameters, decorators };

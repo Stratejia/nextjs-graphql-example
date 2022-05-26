@@ -7,10 +7,11 @@ const defaultMode = 'light';
 
 type Props = {
   children: ReactNode;
+  initialMode?: ThemeMode;
 };
 
-function ThemeProvider({ children }: Props) {
-  const [mode, setMode] = useState<ThemeMode>(defaultMode);
+function ThemeProvider({ children, initialMode = defaultMode }: Props) {
+  const [mode, setMode] = useState<ThemeMode>(initialMode);
 
   const theme = useMemo(() => getTheme(mode), [mode]);
 
