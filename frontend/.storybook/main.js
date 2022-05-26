@@ -1,8 +1,5 @@
-const storiesDirectories = 'components|pages';
-const storiesExtensions = 'mdx|tsx';
-
 module.exports = {
-  stories: [`../@(${storiesDirectories})/**/*.stories.@(${storiesExtensions})`],
+  stories: [`../stories/**/*.stories.@($(mdx|tsx)`],
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-links',

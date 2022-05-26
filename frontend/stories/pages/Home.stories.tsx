@@ -1,4 +1,4 @@
-import Home from './index';
+import Home from '../../pages';
 
 const config = {
   title: 'Pages/Home',
