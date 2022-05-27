@@ -13,6 +13,10 @@ Here's what we decided to use.
 - [React](https://reactjs.org/)
 - [Apollo GraphQL](https://www.apollographql.com/)
 
+## Testing
+
+- [Jest](https://jestjs.io/)
+
 ## Translations
 
 - [i18next](https://www.i18next.com/)

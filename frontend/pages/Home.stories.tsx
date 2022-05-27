@@ -1,3 +1,4 @@
+import React from 'react';
 import Home from './index.page';
 
 const config = {

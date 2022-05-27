@@ -24,6 +24,7 @@ For more info, see Next.js file structure.
 - `styles`: Application styling utilities
 - `types`: Type declarations (.d.ts)
 - `utils`: Utility functions
+- `utils-test`: Utility functions for tests
 
 ### Development files
 
