@@ -16,7 +16,13 @@ For more info, see Next.js file structure.
 - `components`: UI Components
   - `common`: Components used by non-specific parts of the app
 - `pages`: Pages, routing automatically handled by Next.js
+  - `_app.page.tsx`: Application (wrapped by providers)
+  - `/**/*.page.tsx`: Pages of the application
 - `public`: Public assets
 - `stories`: Stories of UI components.
 - `styles`: Application styling utilities
 - `types`: Type declarations (.d.ts)
+
+### Development files
+
+- `/**/*.stories.tsx`: Stories of UI components
