@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next';
 import Page from '../components/common/layouts/Page';
 import AppTitle from '../components/common/typography/AppTitle';
 import Body1 from '../components/common/typography/Body1';
-import { Locale } from '../types/i18n';
+import { Locale, Namespace } from '../types/i18n';
 import getServerSideTranslations from '../utils/getServerSideTranslations';
 
 function Home() {
@@ -29,7 +29,7 @@ function Home() {
 async function getStaticProps({ locale }: { locale: Locale }) {
   return {
     props: {
-      ...(await getServerSideTranslations({ locale, namespaces: ['home'] })),
+      ...(await getServerSideTranslations({ locale, namespaces: [Namespace.Home] })),
     },
   };
 }

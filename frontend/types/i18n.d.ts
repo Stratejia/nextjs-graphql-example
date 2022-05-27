@@ -1,5 +1,10 @@
-type Locale = 'en';
+enum Locale {
+  EN = 'en',
+}
 
-type Namespace = 'common' | 'home';
+enum Namespace {
+  Common = 'common',
+  Home = 'home',
+}
 
 export { Locale, Namespace };

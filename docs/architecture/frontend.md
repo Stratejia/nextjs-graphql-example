@@ -1,6 +1,6 @@
 # Frontend
 
-For more info on UI components, see [associated doc](components/index.md).
+For more info on UI components, see [associated doc](../development/components/index.md).
 
 ## Software architecture
 
@@ -22,6 +22,7 @@ For more info, see Next.js file structure.
 - `stories`: Stories of UI components.
 - `styles`: Application styling utilities
 - `types`: Type declarations (.d.ts)
+- `utils`: Utility functions
 
 ### Development files
 

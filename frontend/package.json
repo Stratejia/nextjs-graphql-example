@@ -12,10 +12,10 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "lint:staged": "lint-staged",
-    "prettier": "prettier .",
-    "prettier:write": "prettier . --write",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "prettier": "prettier . --quiet",
+    "prettier:write": "prettier . --quiet --write",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "storybook:build": "build-storybook -s ./public"
   },
   "dependencies": {
     "next": "^12.1.6",
@@ -46,8 +46,11 @@
     "eslint-config-next": "^12.1.6",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-storybook": "^0.5.12",
+    "i18next": "^21.8.4",
+    "i18next-http-backend": "^1.4.1",
     "lint-staged": "^12.4.1",
     "prettier": "^2.6.2",
+    "react-i18next": "^11.16.9",
     "typescript": "^4.6.4"
   },
   "lint-staged": {

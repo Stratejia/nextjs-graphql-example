@@ -10,4 +10,17 @@ module.exports = {
   core: {
     builder: '@storybook/builder-webpack5',
   },
+  webpackFinal: function (config) {
+    return {
+      ...config,
+      resolve: {
+        ...config.resolve,
+        alias: {
+          ...config.resolve.alias,
+          fs: false,
+          path: false,
+        },
+      },
+    };
+  },
 };
