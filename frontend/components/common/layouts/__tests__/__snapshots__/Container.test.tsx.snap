@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Container Given children renders 1`] = `
+exports[`Container Given children Should render 1`] = `
 <div
   className="sc-bczRLJ eGDUch"
 >
@@ -10,7 +10,7 @@ exports[`Container Given children renders 1`] = `
 </div>
 `;
 
-exports[`Container Given no children renders 1`] = `
+exports[`Container Given no children Should render 1`] = `
 <div
   className="sc-bczRLJ eGDUch"
 />

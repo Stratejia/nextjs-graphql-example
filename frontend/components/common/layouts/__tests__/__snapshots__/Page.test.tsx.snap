@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Page Given children renders 1`] = `
+exports[`Page Given children Should render 1`] = `
 <div
   className="sc-bczRLJ eGDUch"
 >

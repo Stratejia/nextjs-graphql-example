@@ -1,7 +1,17 @@
 module.exports = {
   setupFilesAfterEnv: ['./jest.setup.js'],
   testPathIgnorePatterns: ['./.next/', './node_modules/', './.storybook'],
-  collectCoverageFrom: ['**/*.{js,jsx,ts,tsx}', '!./node_modules/**', '!./.next/**', '!./.storybook/**'],
+  collectCoverageFrom: [
+    '**/*.{js,jsx,ts,tsx}',
+    '!./*',
+    '!./.next/**',
+    '!./.storybook/**',
+    '!./coverage/**',
+    '!./node_modules/**',
+    '!./pages/_app.page.tsx',
+    '!./types/**',
+    '!./**/__stories__/**',
+  ],
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
   },

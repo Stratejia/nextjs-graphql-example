@@ -5,7 +5,7 @@ import withContexts from '../../../../utils-test/withContexts';
 
 describe('Container', () => {
   describe('Given no children', () => {
-    it('renders', () => {
+    it('Should render', () => {
       const render = create(withContexts(<Container />)).toJSON();
 
       expect(render).toMatchSnapshot();
@@ -15,7 +15,7 @@ describe('Container', () => {
   describe('Given children', () => {
     const children = <span>Children</span>;
 
-    it('renders', () => {
+    it('Should render', () => {
       const render = create(withContexts(<Container>{children}</Container>)).toJSON();
 
       expect(render).toMatchSnapshot();

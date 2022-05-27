@@ -7,7 +7,7 @@ describe('Page', () => {
   describe('Given children', () => {
     const children = <span>Children</span>;
 
-    it('renders', () => {
+    it('Should render', () => {
       const render = create(withContexts(<Page>{children}</Page>)).toJSON();
 
       expect(render).toMatchSnapshot();
