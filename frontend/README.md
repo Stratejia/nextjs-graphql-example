@@ -35,10 +35,11 @@ yarn prettier
 yarn prettier:write # Fix code style using prettier
 ```
 
-### Start storybook
+### Storybook
 
 Storybook will be available on [http://localhost:6006](http://localhost:6006).
 
 ```bash
 yarn storybook
+yarn storybook:build # Build static storybook site
 ```

@@ -1,8 +1,8 @@
-import { Page } from '../../../../components/common/layouts';
+import Container from './Container';
 
 const config = {
-  title: 'Components/Layouts/Page',
-  component: Page,
+  title: 'Components/Layouts/Container',
+  component: Container,
 };
 
 type TemplateProps = {
@@ -17,9 +17,9 @@ type TemplateProps = {
 
 function Template({ children: { style } }: TemplateProps) {
   return (
-    <Page>
+    <Container>
       <div style={style} />
-    </Page>
+    </Container>
   );
 }
 

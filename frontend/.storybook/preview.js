@@ -2,6 +2,14 @@ import React from 'react';
 import { withContexts } from '@storybook/addon-contexts/react';
 import { contexts } from './contexts';
 import { GlobalStyle } from '../styles';
+import * as NextImage from 'next/image';
+
+const OriginalNextImage = NextImage.default;
+
+Object.defineProperty(NextImage, 'default', {
+  configurable: true,
+  value: props => <OriginalNextImage {...props} unoptimized />,
+});
 
 const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

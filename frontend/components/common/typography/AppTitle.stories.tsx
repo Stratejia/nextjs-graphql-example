@@ -1,4 +1,4 @@
-import { AppTitle } from '../../../components/common/typography';
+import AppTitle from './AppTitle';
 
 const config = {
   title: 'Components/Typography/AppTitle',
