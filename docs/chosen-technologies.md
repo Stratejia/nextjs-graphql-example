@@ -13,6 +13,17 @@ Here's what we decided to use.
 - [React](https://reactjs.org/)
 - [Apollo GraphQL](https://www.apollographql.com/)
 
+## Translations
+
+- [i18next](https://www.i18next.com/)
+- [react-i18next](https://react.i18next.com/)
+- [next-i18next](https://www.npmjs.com/package/next-i18next)
+
+## Styling
+
+- [styled-components](https://styled-components.com/)
+- [styled-theming](https://www.npmjs.com/package/styled-theming)
+
 ## App containers
 
 - [Docker](https://www.docker.com/)

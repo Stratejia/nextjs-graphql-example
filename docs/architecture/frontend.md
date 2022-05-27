@@ -19,6 +19,7 @@ For more info, see Next.js file structure.
   - `_app.page.tsx`: Application (wrapped by providers)
   - `/**/*.page.tsx`: Pages of the application
 - `public`: Public assets
+  - `locales`: Translations for each locale, separated into one folder by locale
 - `stories`: Stories of UI components.
 - `styles`: Application styling utilities
 - `types`: Type declarations (.d.ts)
