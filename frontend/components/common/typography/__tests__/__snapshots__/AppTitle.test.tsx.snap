@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppTitle Given no text renders 1`] = `
+<h1
+  className="sc-bczRLJ eNbHFO"
+/>
+`;
+
+exports[`AppTitle Given text renders 1`] = `
+<h1
+  className="sc-bczRLJ eNbHFO"
+>
+  some text
+</h1>
+`;

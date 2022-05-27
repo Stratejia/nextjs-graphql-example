@@ -28,4 +28,5 @@ For more info, see Next.js file structure.
 
 ### Development files
 
-- `/**/*.stories.tsx`: Stories of UI components
+- `/**/__stories__/*.stories.tsx`: Stories of UI components
+- `/**/__tests__/*.test.tsx`: Unit tests

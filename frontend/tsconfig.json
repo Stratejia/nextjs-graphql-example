@@ -16,5 +16,11 @@
     "incremental": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", ".storybook", "utils-test", "**/*.stories.$(tsx|mdx)", "**/*.test.tsx"]
+  "exclude": [
+    "node_modules",
+    ".storybook",
+    "utils-test",
+    "**/__stories__/**",
+    "**/__tests__/**",
+  ]
 }

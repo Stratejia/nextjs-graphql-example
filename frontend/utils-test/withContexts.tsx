@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react';
+import * as React from 'react';
 import ThemeProvider from '../contexts/ThemeProvider';
 
-function withContexts(children: ReactNode) {
+function withContexts(children: React.ReactNode) {
   return <ThemeProvider>{children}</ThemeProvider>;
 }
 

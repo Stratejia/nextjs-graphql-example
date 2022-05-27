@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Body1 Given no text renders 1`] = `
+<span
+  className="sc-bczRLJ dqVkrV"
+/>
+`;
+
+exports[`Body1 Given text renders 1`] = `
+<span
+  className="sc-bczRLJ dqVkrV"
+>
+  some text
+</span>
+`;
