@@ -24,7 +24,7 @@ describe('ThemeProvider', () => {
       it('Should have dark as its initial mode', () => {
         const mode = getByTestId('mode');
 
-        expect(mode).toBe('dark');
+        expect(mode.innerHTML).toBe('dark');
       });
     });
 
@@ -35,7 +35,7 @@ describe('ThemeProvider', () => {
       it('Should have initial mode as its mode', () => {
         const mode = getByTestId('mode');
 
-        expect(mode).toBe(initialMode);
+        expect(mode.innerHTML).toBe(initialMode);
       });
 
       describe('When setting theme', () => {
@@ -45,7 +45,7 @@ describe('ThemeProvider', () => {
         it('Should set theme', () => {
           const mode = getByTestId('mode');
 
-          expect(mode).toBe(modeToSet);
+          expect(mode.innerHTML).toBe(modeToSet);
         });
       });
 
@@ -58,7 +58,7 @@ describe('ThemeProvider', () => {
         it('Should switch theme', () => {
           const mode = getByTestId('mode');
 
-          expect(mode).toBe(modeToBeSwitched);
+          expect(mode.innerHTML).toBe(modeToBeSwitched);
         });
       });
     });

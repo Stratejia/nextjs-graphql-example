@@ -12,7 +12,7 @@ Array [
     onClick={[Function]}
   />,
   <button
-    data-testid="switchModeButton"
+    data-testid="setModeButton"
     onClick={[Function]}
   />,
 ]
