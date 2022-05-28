@@ -1,5 +1,6 @@
 module.exports = {
   setupFilesAfterEnv: ['./jest.setup.js'],
+  testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['./.next/', './node_modules/', './.storybook'],
   collectCoverageFrom: [
     '**/*.{js,jsx,ts,tsx}',

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeProvider Given children Should match snapshot 1`] = `
+Array [
+  <span
+    data-testid="mode"
+  >
+    dark
+  </span>,
+  <button
+    data-testid="switchModeButton"
+    onClick={[Function]}
+  />,
+  <button
+    data-testid="switchModeButton"
+    onClick={[Function]}
+  />,
+]
+`;

@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Body1 Given no text Should render 1`] = `
+exports[`Body1 Given no text Should match snapshot 1`] = `
 <span
   className="sc-bczRLJ dqVkrV"
 />
 `;
 
-exports[`Body1 Given text Should render 1`] = `
+exports[`Body1 Given text Should match snapshot 1`] = `
 <span
   className="sc-bczRLJ dqVkrV"
 >

@@ -5,7 +5,7 @@ import withContexts from '../../../../utils-test/withContexts';
 
 describe('Body1', () => {
   describe('Given no text', () => {
-    it('Should render', () => {
+    it('Should match snapshot', () => {
       const render = create(withContexts(<Body1 />)).toJSON();
 
       expect(render).toMatchSnapshot();
@@ -15,7 +15,7 @@ describe('Body1', () => {
   describe('Given text', () => {
     const text = 'some text';
 
-    it('Should render', () => {
+    it('Should match snapshot', () => {
       const render = create(withContexts(<Body1>{text}</Body1>)).toJSON();
 
       expect(render).toMatchSnapshot();
