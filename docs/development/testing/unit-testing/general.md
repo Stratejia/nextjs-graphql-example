@@ -35,7 +35,7 @@ describe('Test subject', () => {
     describe('When doing something', () => {
       // Act
 
-      it('Then this should happen', () => {
+      test('Then this should happen', () => {
         // Assert
       });
     });
@@ -53,7 +53,7 @@ describe('Test subject', () => {
     describe('When doing something', () => {
       // Act
 
-      it('Then this should happen', () => {
+      test('Then this should happen', () => {
         // Assert
       });
     });
@@ -61,11 +61,11 @@ describe('Test subject', () => {
     describe('When doing something else', () => {
       // Act
 
-      it('Then this should happen', () => {
+      test('Then this should happen', () => {
         // Assert
       });
 
-      it('Then this should also happen', () => {
+      test('Then this should also happen', () => {
         // Assert
       });
     });
@@ -85,7 +85,7 @@ describe('Test subject', () => {
     // Arrange
 
     describe('When doing something asynchronous', () => {
-      it('Then this should happen', async () => {
+      test('Then this should happen', async () => {
         // Act
         const myData = await getMyData();
 
@@ -100,7 +100,7 @@ describe('Test subject', () => {
 describe('Test subject', () => {
   describe('Given some asynchronous value', () => {
     describe('When doing something', () => {
-      it('Then this should happen', async () => {
+      test('Then this should happen', async () => {
         // Arrange
         const expectedValue = await getExpectedValue();
 
@@ -117,7 +117,7 @@ describe('Test subject', () => {
 describe('Test subject', () => {
   describe('Given some asynchronous value', () => {
     describe('When doing something asynchronous', () => {
-      it('Then this should happen', async () => {
+      test('Then this should happen', async () => {
         // Arrange
         const expectedValue = await getExpectedValue();
 

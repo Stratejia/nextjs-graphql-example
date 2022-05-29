@@ -10,10 +10,13 @@ function Template({ ...args }) {
   return <Body1 {...args} />;
 }
 
-const Basic = Template.bind({}) as any;
-Basic.args = {
+const WithText = Template.bind({}) as any;
+WithText.args = {
   children: 'Body 1',
 };
 
+const WithoutText = Template.bind({}) as any;
+WithoutText.args = {};
+
 export default config;
-export { Basic };
+export { WithText, WithoutText };

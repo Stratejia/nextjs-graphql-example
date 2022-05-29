@@ -4,9 +4,11 @@ import Home from '../index.page';
 import withContexts from '../../utils-test/withContexts';
 
 describe('Home', () => {
-  it('Should match snapshot', () => {
+  describe('When rendering', () => {
     const render = create(withContexts(<Home />)).toJSON();
 
-    expect(render).toMatchSnapshot();
+    test('Then match snapshot', () => {
+      expect(render).toMatchSnapshot();
+    });
   });
 });

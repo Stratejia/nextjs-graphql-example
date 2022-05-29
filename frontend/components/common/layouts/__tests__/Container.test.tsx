@@ -5,20 +5,24 @@ import withContexts from '../../../../utils-test/withContexts';
 
 describe('Container', () => {
   describe('Given no children', () => {
-    it('Should match snapshot', () => {
+    describe('When rendering', () => {
       const render = create(withContexts(<Container />)).toJSON();
 
-      expect(render).toMatchSnapshot();
+      test('Then match snapshot', () => {
+        expect(render).toMatchSnapshot();
+      });
     });
   });
 
   describe('Given children', () => {
     const children = <span>Children</span>;
 
-    it('Should should match snapshot', () => {
+    describe('When rendering', () => {
       const render = create(withContexts(<Container>{children}</Container>)).toJSON();
 
-      expect(render).toMatchSnapshot();
+      test('Then match snapshot', () => {
+        expect(render).toMatchSnapshot();
+      });
     });
   });
 });

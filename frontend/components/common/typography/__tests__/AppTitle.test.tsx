@@ -5,20 +5,24 @@ import withContexts from '../../../../utils-test/withContexts';
 
 describe('AppTitle', () => {
   describe('Given no text', () => {
-    it('Should match snapshot', () => {
+    describe('When rendering', () => {
       const render = create(withContexts(<AppTitle />)).toJSON();
 
-      expect(render).toMatchSnapshot();
+      test('Then match snapshot', () => {
+        expect(render).toMatchSnapshot();
+      });
     });
   });
 
   describe('Given text', () => {
     const text = 'some text';
 
-    it('Should match snapshot', () => {
+    describe('When rendering', () => {
       const render = create(withContexts(<AppTitle>{text}</AppTitle>)).toJSON();
 
-      expect(render).toMatchSnapshot();
+      test('Then match snapshot', () => {
+        expect(render).toMatchSnapshot();
+      });
     });
   });
 });
