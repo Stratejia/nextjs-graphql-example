@@ -44,10 +44,12 @@ jobs:
         run: yarn lint
       - name: Run prettier
         run: yarn prettier
-      - name: Run tests
+      - name: Run tests with coverage
         run: yarn test:ci --coverage
       - name: Build app
         run: yarn build
+      - name: Build Storybook
+        run: yarn storybook:build
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v2
         with:
