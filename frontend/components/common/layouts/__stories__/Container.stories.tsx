@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Container from '../Container';
 
 const config = {
@@ -7,7 +7,7 @@ const config = {
 };
 
 type TemplateProps = {
-  children: {
+  children?: {
     style: {
       width: string;
       height: string;
@@ -16,16 +16,15 @@ type TemplateProps = {
   };
 };
 
-function Template({ children: { style } }: TemplateProps) {
-  return (
-    <Container>
-      <div style={style} />
-    </Container>
-  );
+function Template({ children }: TemplateProps) {
+  return <Container>{children ? <div style={children.style} /> : null}</Container>;
 }
 
-const Basic = Template.bind({}) as any;
-Basic.args = {
+const WithoutChildren = Template.bind({}) as any;
+WithoutChildren.args = {};
+
+const WithChildren = Template.bind({}) as any;
+WithChildren.args = {
   children: {
     style: {
       width: '100px',
@@ -36,4 +35,4 @@ Basic.args = {
 };
 
 export default config;
-export { Basic };
+export { WithoutChildren, WithChildren };

@@ -46,7 +46,7 @@ value sometimes. For instance, context providers have enough logic to be worth t
 
 I won't forbid you from unit-testing your components. Be really, tell me a component like the following is worth a test:
 
-```ts
+```tsx
 function RecipeTable({ recipes }: Props) {
   return recipes.map(recipe => <RecipeTableRow recipe={recipe} />);
 }

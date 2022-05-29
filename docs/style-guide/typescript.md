@@ -99,6 +99,24 @@ function double(a: number) {
 }
 ```
 
+### Exceptions
+
+This only applies to arrow functions declared as the given examples. For functions in type definitions or for simple
+lambdas sent as params, arrow functions are sometimes best suited.
+
+Examples:
+
+```ts
+type SomeType = {
+  someValue: string;
+  someFunction: () => Promise<void>;
+};
+```
+
+```ts
+const filteredValues = values.filter(value => value.someValue === 'someValue');
+```
+
 ## No function return types
 
 Supported by linter: **NO**
