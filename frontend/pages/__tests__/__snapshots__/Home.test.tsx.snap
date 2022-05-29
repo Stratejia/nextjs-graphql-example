@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home Should match snapshot 1`] = `
+exports[`Home When rendering Then match snapshot 1`] = `
 <div
   className="sc-bczRLJ eGDUch"
 >

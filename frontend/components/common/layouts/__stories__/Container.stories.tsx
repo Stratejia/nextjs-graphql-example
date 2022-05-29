@@ -20,9 +20,6 @@ function Template({ children }: TemplateProps) {
   return <Container>{children ? <div style={children.style} /> : null}</Container>;
 }
 
-const WithoutChildren = Template.bind({}) as any;
-WithoutChildren.args = {};
-
 const WithChildren = Template.bind({}) as any;
 WithChildren.args = {
   children: {
@@ -34,5 +31,8 @@ WithChildren.args = {
   },
 };
 
+const WithoutChildren = Template.bind({}) as any;
+WithoutChildren.args = {};
+
 export default config;
-export { WithoutChildren, WithChildren };
+export { WithChildren, WithoutChildren };

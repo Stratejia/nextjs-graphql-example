@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppTitle Given no text Should match snapshot 1`] = `
+exports[`AppTitle Given no text When rendering Then match snapshot 1`] = `
 <h1
   className="sc-bczRLJ eNbHFO"
 />
 `;
 
-exports[`AppTitle Given text Should match snapshot 1`] = `
+exports[`AppTitle Given text When rendering Then match snapshot 1`] = `
 <h1
   className="sc-bczRLJ eNbHFO"
 >

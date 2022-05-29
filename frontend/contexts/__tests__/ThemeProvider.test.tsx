@@ -10,10 +10,12 @@ describe('ThemeProvider', () => {
     // const children = <ThemeProviderChild modeToSet={modeToSet} />;
     const children = <span>Children</span>;
 
-    it('Should match snapshot', () => {
+    describe('When rendering', () => {
       const render = create(<ThemeProvider>{children}</ThemeProvider>).toJSON();
 
-      expect(render).toMatchSnapshot();
+      test('Then match snapshot', () => {
+        expect(render).toMatchSnapshot();
+      });
     });
 
     // TODO: Tests here fail because of data-testid being rendered twice. This is probably because of React strict mode.
@@ -21,46 +23,47 @@ describe('ThemeProvider', () => {
     // TODO: See if this is necessary, we have multiple data-testid for some reason
     // afterEach(cleanup);
     /*
-    describe('Given no initial mode', () => {
+    describe('Given no initial theme mode', () => {
       const { getByTestId } = render(<ThemeProvider>{children}</ThemeProvider>);
 
-      it('Should have dark as its initial mode', () => {
+      describe('When displaying theme mode', () => {
         const mode = getByTestId('mode');
 
-        expect(mode.innerHTML).toBe('dark');
+        test('Then use dark mode', () => {
+          expect(mode.innerHTML).toBe('dark');
+        });
       });
     });
 
-    describe('Given initial mode', () => {
+    describe('Given initial theme mode', () => {
       const initialMode = 'light';
       const { getByTestId } = render(<ThemeProvider initialMode={initialMode}>{children}</ThemeProvider>);
 
-      it('Should have initial mode as its mode', () => {
+      describe('When displaying theme mode', () => {
         const mode = getByTestId('mode');
 
-        expect(mode.innerHTML).toBe(initialMode);
+        test('Then use initial theme mode', () => {
+          expect(mode.innerHTML).toBe(initialMode);
+        });
       });
 
-      describe('When setting theme', () => {
+      describe('When setting theme and displaying theme mode', () => {
         const setModeButton = getByTestId('setModeButton');
         fireEvent.click(setModeButton);
+        const mode = getByTestId('mode');
 
-        it('Should set theme', () => {
-          const mode = getByTestId('mode');
-
+        test('Then set theme mode', () => {
           expect(mode.innerHTML).toBe(modeToSet);
         });
       });
 
-      describe('When switching theme', () => {
+      describe('When switching theme and displaying theme mode', () => {
         const modeToBeSwitched = 'dark';
-
         const switchModeButton = getByTestId('switchModeButton');
         fireEvent.click(switchModeButton);
+        const mode = getByTestId('mode');
 
-        it('Should switch theme', () => {
-          const mode = getByTestId('mode');
-
+        test('Then switch theme mode', () => {
           expect(mode.innerHTML).toBe(modeToBeSwitched);
         });
       });
