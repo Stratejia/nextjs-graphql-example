@@ -3,6 +3,7 @@
 [![Lint General](https://github.com/Stratejia/nextjs-graphql-example/actions/workflows/lint-general.yml/badge.svg)](https://github.com/Stratejia/nextjs-graphql-example/actions/workflows/lint-general.yml)
 [![Build Frontend](https://github.com/Stratejia/nextjs-graphql-example/actions/workflows/build-frontend.yml/badge.svg)](https://github.com/Stratejia/nextjs-graphql-example/actions/workflows/build-frontend.yml)
 [![GH Pages](https://github.com/Stratejia/nextjs-graphql-example/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/Stratejia/nextjs-graphql-example/actions/workflows/pages/pages-build-deployment)
+[![Code Coverage](https://codecov.io/gh/Stratejia/nextjs-graphql-example/branch/main/graph/badge.svg?token=16PI4AZ7P1)](https://codecov.io/gh/Stratejia/nextjs-graphql-example)
 
 Simple [Next.js](https://v3.nuxtjs.org/) and [Apollo](https://www.apollographql.com/) example about recipes.
 
