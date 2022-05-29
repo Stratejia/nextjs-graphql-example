@@ -16,7 +16,7 @@ describe('getServerSideTranslations', () => {
     const locale = 'en';
     const namespaces: Namespace[] = ['common'];
 
-    test('Should get server side translations', async () => {
+    test('Then get server side translations', async () => {
       const serverSideTranslations = await getServerSideTranslations({ locale, namespaces });
 
       expect(serverSideTranslations).toBe(stubServerSideTranslations);
