@@ -1,5 +1,12 @@
 # Styling
 
+## Only styled-components
+
+Supported by linter: **NO**
+
+We do not allow plain CSS or SCSS in this codebase. We exclusively use styled-components to keep everything
+style-related centralized.
+
 ## Use $ with custom props
 
 Supported by linter: **NO**
