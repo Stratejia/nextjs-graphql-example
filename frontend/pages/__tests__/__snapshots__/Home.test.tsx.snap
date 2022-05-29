@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Should match snapshot 1`] = `
+<div
+  className="sc-bczRLJ eGDUch"
+>
+  <div
+    className="sc-gsnTZi ksunwW"
+  >
+    <main>
+      <h1
+        className="sc-dkzDqf gkDXsv"
+      >
+        nextRecipes
+      </h1>
+      <span
+        className="sc-hKMtZM gnmBBv"
+      >
+        websiteAboutRecipes
+      </span>
+    </main>
+  </div>
+</div>
+`;

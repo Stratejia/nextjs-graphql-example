@@ -1,4 +1,5 @@
-import Home from './index.page';
+import * as React from 'react';
+import Home from '../index.page';
 
 const config = {
   title: 'Pages/Home',

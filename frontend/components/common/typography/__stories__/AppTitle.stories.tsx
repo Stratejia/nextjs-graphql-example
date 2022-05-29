@@ -1,4 +1,5 @@
-import AppTitle from './AppTitle';
+import * as React from 'react';
+import AppTitle from '../AppTitle';
 
 const config = {
   title: 'Components/Typography/AppTitle',

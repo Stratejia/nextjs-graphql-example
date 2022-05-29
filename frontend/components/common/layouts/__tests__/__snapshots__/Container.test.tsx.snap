@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container Given children Should should match snapshot 1`] = `
+<div
+  className="sc-bczRLJ eGDUch"
+>
+  <span>
+    Children
+  </span>
+</div>
+`;
+
+exports[`Container Given no children Should match snapshot 1`] = `
+<div
+  className="sc-bczRLJ eGDUch"
+/>
+`;

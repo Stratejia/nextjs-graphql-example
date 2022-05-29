@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page Given children Should match snapshot 1`] = `
+<div
+  className="sc-bczRLJ eGDUch"
+>
+  <div
+    className="sc-gsnTZi ksunwW"
+  >
+    <span>
+      Children
+    </span>
+  </div>
+</div>
+`;

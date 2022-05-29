@@ -4,6 +4,10 @@
 
 - [Next.js docs](https://nextjs.org/docs)
 
+## Testing
+
+- [Setup Next.js with Typescript , Jest and React Testing Library](https://dev.to/maciekgrzybek/setup-next-js-with-typescript-jest-and-react-testing-library-28g5)
+
 ## Translations
 
 - [Using next-i18next in Storybook](https://gist.github.com/justincy/c1075650b1d5ba448c50eaf83cbb4ffe)

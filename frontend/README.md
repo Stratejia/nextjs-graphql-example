@@ -35,6 +35,15 @@ yarn prettier
 yarn prettier:write # Fix code style using prettier
 ```
 
+### Run tests
+
+```bash
+yarn test
+yarn test:update # Update snapshots
+yarn test:coverage # Display code coverage
+yarn test:ci # Run tests with CI environment
+```
+
 ### Storybook
 
 Storybook will be available on [http://localhost:6006](http://localhost:6006).

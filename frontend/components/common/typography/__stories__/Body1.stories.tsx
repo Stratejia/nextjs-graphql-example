@@ -1,4 +1,5 @@
-import Body1 from './Body1';
+import * as React from 'react';
+import Body1 from '../Body1';
 
 const config = {
   title: 'Components/Typography/Body1',
