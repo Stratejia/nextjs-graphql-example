@@ -1,7 +1,7 @@
 import { I18nextProvider } from 'react-i18next';
 import { ThemeProvider } from 'styled-components';
-import { defaultMode } from '../contexts/ThemeProvider';
-import { getTheme } from '../styles';
+import { defaultMode } from '../src/contexts/ThemeProvider';
+import { getTheme } from '../src/styles';
 import i18n from './i18n';
 
 const contexts = [

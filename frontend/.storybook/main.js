@@ -1,5 +1,7 @@
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+
 module.exports = {
-  stories: ['../**/__stories__/*.stories.@(mdx|tsx)'],
+  stories: ['../src/**/__stories__/*.stories.@(mdx|tsx)'],
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-links',
@@ -11,16 +13,18 @@ module.exports = {
     builder: '@storybook/builder-webpack5',
   },
   webpackFinal: function (config) {
-    return {
-      ...config,
-      resolve: {
-        ...config.resolve,
-        alias: {
-          ...config.resolve.alias,
-          fs: false,
-          path: false,
-        },
-      },
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      fs: false,
+      path: false,
     };
+
+    if (config.resolve.plugins) {
+      config.resolve.plugins.push(new TsconfigPathsPlugin());
+    } else {
+      config.resolve.plugins = [new TsconfigPathsPlugin()];
+    }
+
+    return config;
   },
 };
