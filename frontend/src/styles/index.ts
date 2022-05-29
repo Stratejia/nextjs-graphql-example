@@ -16,6 +16,7 @@ function getTheme(mode: ThemeMode) {
   };
 }
 
+// TODO: This is deadcode for now, remove later if unused
 function useTheme() {
   const theme = useStyledComponentsTheme();
   return theme as Theme;

@@ -3,7 +3,6 @@ module.exports = {
   plugins: ['prettier'],
   rules: {
     // TODO: Move the following to .eslintrc.base.js
-    'import/no-relative-parent-imports': ['warn'],
     'no-restricted-imports': [
       'warn',
       {
