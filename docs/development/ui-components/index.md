@@ -1,3 +1,3 @@
-# Frontend components
+# UI components
 
 TODO: Missing documentation
