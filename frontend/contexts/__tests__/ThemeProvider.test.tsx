@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { create } from 'react-test-renderer';
-// import { render, cleanup, fireEvent } from '@testing-library/react';
+import { render, cleanup, fireEvent } from '@testing-library/react';
 import ThemeProvider from '../ThemeProvider';
-import ThemeProviderChild from './__stubs__/ThemeProviderChild';
+import ThemeProviderChild from '../__stubs__/ThemeProviderChild';
 
 describe('ThemeProvider', () => {
   describe('Given children', () => {
@@ -15,11 +15,8 @@ describe('ThemeProvider', () => {
       expect(render).toMatchSnapshot();
     });
 
-    // TODO: Tests here fail because of data-testid being rendered twice. This is probably because of React strict mode.
-
     // TODO: See if this is necessary, we have multiple data-testid for some reason
     // afterEach(cleanup);
-    /*
     describe('Given no initial mode', () => {
       const { getByTestId } = render(<ThemeProvider>{children}</ThemeProvider>);
 
@@ -64,6 +61,5 @@ describe('ThemeProvider', () => {
         });
       });
     });
-    */
   });
 });

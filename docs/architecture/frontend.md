@@ -28,5 +28,7 @@ For more info, see Next.js file structure.
 
 ### Development files
 
-- `/**/__stories__/*.stories.tsx`: Stories of UI components
-- `/**/__tests__/*.test.tsx`: Unit tests
+- `/**/__stories__`: Stories of UI components
+- `/**/__tests__`: Unit tests
+- `/**/__stubs__`: Stubs (fake data) used for tests
+- `/**/__mocks__`: Mocks (mocked functionalities) used for tests
