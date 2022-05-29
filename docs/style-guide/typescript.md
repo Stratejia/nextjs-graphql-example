@@ -146,10 +146,11 @@ function getAccounts() {
 
 Supported by linter: **NO**
 
-For readability and usability, we prefer using a single type as function param **when the amount of params is more than
-one**. This reduces ripple effect when we want to switch around params placement and lets the function user decide in
-which order params are sent (defined in type). This also reduces the amount of param type definition from n (number of
-values) to 1 (params type).
+For readability and usability, we prefer using a single type as function param. This reduces ripple effect when we
+want to switch around params placement and lets the function user decide in which order params are sent (defined in
+type). This also reduces the amount of param type definition from n (number of values) to 1 (props type).
+
+When there is a single param, you can choose to either keep it this way or use a props type. Your call.
 
 Incorrect:
 
@@ -167,17 +168,27 @@ Correct:
 
 ```ts
 // Definition
-type GetAccountUriParams = {
+type Props = {
   baseUrl: string;
   accountId: string;
 };
 
-function getAccountUri({ baseUrl, accountId }: GetAccountUriParams) {
+function getAccountUri({ baseUrl, accountId }: Props) {
   return `${baseUrl}/accounts/${accountId}`;
 }
 
 // Usage
 const accountUri = getAccountUri({ baseUrl: 'https://example.com', accountId: '123' });
+```
+
+```ts
+// Definition (this is okay, but a props type is better
+function getAccountsUri(baseUrl: string) {
+  return `${baseUrl}/accounts`;
+}
+
+// Usage
+const accountUri = getAccountUri('https://example.com');
 ```
 
 ## Imports first, exports last
