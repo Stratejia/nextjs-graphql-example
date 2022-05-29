@@ -1,7 +1,7 @@
 import React from 'react';
 import { withContexts } from '@storybook/addon-contexts/react';
 import { contexts } from './contexts';
-import { GlobalStyle } from '../styles';
+import { GlobalStyle } from '../src/styles';
 import * as NextImage from 'next/image';
 
 const OriginalNextImage = NextImage.default;
