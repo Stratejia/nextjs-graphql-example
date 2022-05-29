@@ -47,8 +47,6 @@ jobs:
       - name: Build app
         run: yarn build
       - name: Upload coverage to Codecov
-        # TODO: Re-add this
-        # if: github.ref == 'refs/heads/main'
         uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
