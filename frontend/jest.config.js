@@ -12,6 +12,7 @@ module.exports = {
     '!./pages/_app.page.tsx',
     '!./types/**',
     '!./**/__stories__/**',
+    '!./**/__stubs__/**',
   ],
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
