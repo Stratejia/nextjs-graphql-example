@@ -1,9 +1,9 @@
-import React, { ReactNode } from 'react';
+import * as React from 'react';
 import styled, { css } from 'styled-components';
-import Container from './Container';
+import Container from 'components/common/layouts/Container';
 
 type Props = {
-  children: ReactNode;
+  children: React.ReactNode;
 };
 
 function Page({ children }: Props) {

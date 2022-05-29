@@ -1,19 +1,19 @@
-import React, { createContext, ReactNode, useMemo, useState } from 'react';
+import * as React from 'react';
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components';
-import { getTheme, GlobalStyle } from '../styles';
-import { ThemeMode } from '../types/styles';
+import { getTheme, GlobalStyle } from 'styles';
+import { ThemeMode } from 'types/styles';
 
 const defaultMode = 'dark';
 
 type Props = {
-  children: ReactNode;
+  children: React.ReactNode;
   initialMode?: ThemeMode;
 };
 
 function ThemeProvider({ children, initialMode = defaultMode }: Props) {
-  const [mode, setMode] = useState<ThemeMode>(initialMode);
+  const [mode, setMode] = React.useState<ThemeMode>(initialMode);
 
-  const theme = useMemo(() => getTheme(mode), [mode]);
+  const theme = React.useMemo(() => getTheme(mode), [mode]);
 
   function switchMode() {
     setMode(mode === 'light' ? 'dark' : 'light');
@@ -29,7 +29,7 @@ function ThemeProvider({ children, initialMode = defaultMode }: Props) {
   );
 }
 
-const ThemeContext = createContext<{
+const ThemeContext = React.createContext<{
   mode: ThemeMode;
   setMode: (mode: ThemeMode) => void;
   switchMode: () => void;

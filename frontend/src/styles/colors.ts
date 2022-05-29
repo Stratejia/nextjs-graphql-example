@@ -1,4 +1,4 @@
-import { ThemeMode } from '../types/styles';
+import { ThemeMode } from 'types/styles';
 
 // https://coolors.co/c046d3-b118c8-7b108c-374766-061a40-04122c
 const palette = {

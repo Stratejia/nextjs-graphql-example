@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { create } from 'react-test-renderer';
 // import { render, cleanup, fireEvent } from '@testing-library/react';
-import ThemeProvider from '../ThemeProvider';
-// import ThemeProviderChild from '../__stubs__/ThemeProviderChild';
+import ThemeProvider from 'contexts/ThemeProvider';
+// import ThemeProviderChild from 'contexts/__stubs__/ThemeProviderChild';
 
 describe('ThemeProvider', () => {
   describe('Given children', () => {

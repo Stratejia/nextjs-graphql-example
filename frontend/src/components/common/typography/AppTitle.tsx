@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import Typography from './Typography';
+import Typography from 'components/common/typography/Typography';
 
 const AppTitle = styled.h1(
   ({ theme }) => css`

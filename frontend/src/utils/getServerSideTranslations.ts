@@ -1,5 +1,5 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { Locale, Namespace } from '../types/i18n';
+import { Locale, Namespace } from 'types/i18n';
 
 type Props = {
   locale: Locale;

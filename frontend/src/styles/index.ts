@@ -1,9 +1,9 @@
 import { useTheme as useStyledComponentsTheme } from 'styled-components';
-import { ThemeMode } from '../types/styles';
-import GlobalStyle from './GlobalStyle';
-import { getColors } from './colors';
-import spacing from './spacing';
-import fonts from './fonts';
+import GlobalStyle from 'styles/GlobalStyle';
+import { getColors } from 'styles/colors';
+import spacing from 'styles/spacing';
+import fonts from 'styles/fonts';
+import { ThemeMode } from 'types/styles';
 
 type Theme = ReturnType<typeof getTheme>;
 

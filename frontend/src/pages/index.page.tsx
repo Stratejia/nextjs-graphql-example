@@ -1,11 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
-import Page from '../components/common/layouts/Page';
-import AppTitle from '../components/common/typography/AppTitle';
-import Body1 from '../components/common/typography/Body1';
-import { Locale } from '../types/i18n';
-import getServerSideTranslations from '../utils/getServerSideTranslations';
+import Page from 'components/common/layouts/Page';
+import AppTitle from 'components/common/typography/AppTitle';
+import Body1 from 'components/common/typography/Body1';
+import { Locale } from 'types/i18n';
+import getServerSideTranslations from 'utils/getServerSideTranslations';
 
 function Home() {
   const { t } = useTranslation('home');

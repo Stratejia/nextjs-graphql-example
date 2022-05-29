@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { create } from 'react-test-renderer';
-import Body1 from '../Body1';
-import withContexts from '../../../../utils-test/withContexts';
+import Body1 from 'components/common/typography/Body1';
+import withContexts from 'utils-test/withContexts';
 
 describe('Body1', () => {
   describe('Given no text', () => {
