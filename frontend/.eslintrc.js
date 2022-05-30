@@ -1,13 +1,7 @@
 module.exports = {
-  extends: ['next/core-web-vitals', 'plugin:storybook/recommended'],
-  plugins: ['prettier'],
-  rules: {
-    // TODO: Move the following to .eslintrc.base.js
-    'no-restricted-imports': [
-      'warn',
-      {
-        patterns: ['.*'],
-      },
-    ],
+  plugins: ['react'],
+  extends: ['../.eslintrc.base', 'next/core-web-vitals', 'plugin:react/recommended', 'plugin:storybook/recommended'],
+  parserOptions: {
+    project: ['./tsconfig.json'],
   },
 };

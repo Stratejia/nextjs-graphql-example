@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
+import Head from 'next/head';
+import React from 'react';
 import Page from 'components/common/layouts/Page';
 import AppTitle from 'components/common/typography/AppTitle';
 import Body1 from 'components/common/typography/Body1';

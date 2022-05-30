@@ -8,11 +8,11 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "lint:staged": "lint-staged",
-    "prettier": "prettier . --quiet",
-    "prettier:write": "prettier . --quiet --write",
+    "prettier": "prettier .",
+    "prettier:write": "prettier . --write",
     "start": "next start",
     "storybook": "start-storybook -s ./public -p 6006",
     "storybook:build": "build-storybook -s ./public",
@@ -48,9 +48,13 @@
     "@types/react-test-renderer": "^18.0.0",
     "@types/styled-components": "^5.1.25",
     "@types/styled-theming": "^2.2.5",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
     "babel-loader": "^8.2.5",
     "eslint": "^8.16.0",
     "eslint-config-next": "^12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-storybook": "^0.5.12",
     "i18next": "^21.8.4",
@@ -67,7 +71,7 @@
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
-      "eslint . --quiet --fix",
+      "eslint . --fix",
       "prettier . --write"
     ]
   }
