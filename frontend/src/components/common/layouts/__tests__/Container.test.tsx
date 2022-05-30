@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { create } from 'react-test-renderer';
 import Container from 'components/common/layouts/Container';
 import withContexts from 'utils-tests/withContexts';

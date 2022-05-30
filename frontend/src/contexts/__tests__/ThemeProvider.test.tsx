@@ -6,7 +6,7 @@ import ThemeProvider from 'contexts/ThemeProvider';
 
 describe('ThemeProvider', () => {
   describe('Given children', () => {
-    const modeToSet = 'dark';
+    // const modeToSet = 'dark';
     // const children = <ThemeProviderChild modeToSet={modeToSet} />;
     const children = <span>Children</span>;
 

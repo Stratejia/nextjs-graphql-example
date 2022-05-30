@@ -1,4 +1,5 @@
-import * as React from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React from 'react';
 import Page from 'components/common/layouts/Page';
 
 const config = {
