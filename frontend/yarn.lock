@@ -4264,13 +4264,6 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-augment-vir@1.9.1:
-  version "1.9.1"
-  resolved "https://registry.yarnpkg.com/augment-vir/-/augment-vir-1.9.1.tgz#2257829156facf72271dc5c2a3df8c081d2a52c9"
-  integrity sha512-GgXArqs9uvHmDQFbaAYh0QhsxVGPhR+CEVln/3R2hBq5Sq89qXuMyRA4HtPHTfWGzI/TeH5DmupGi702mxP6QQ==
-  dependencies:
-    fs-extra "10.0.1"
-
 autoprefixer@^9.8.6:
   version "9.8.8"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.8.8.tgz#fd4bd4595385fa6f06599de749a4d5f7a474957a"
@@ -6951,15 +6944,6 @@ from2@^2.1.0:
   dependencies:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
-
-fs-extra@10.0.1:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.0.1.tgz#27de43b4320e833f6867cc044bfce29fdf0ef3b8"
-  integrity sha512-NbdoVMZso2Lsrn/QwLXOy6rm0ufY2zEOKCDzJR/0kBsb0E6qed0P3iYK+Ath3BfvXEeu4JhEtXLgILx5psUfag==
-  dependencies:
-    graceful-fs "^4.2.0"
-    jsonfile "^6.0.1"
-    universalify "^2.0.0"
 
 fs-extra@^10.1.0:
   version "10.1.0"
@@ -10480,13 +10464,6 @@ prettier-linter-helpers@^1.0.0:
   integrity sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==
   dependencies:
     fast-diff "^1.1.2"
-
-prettier-plugin-multiline-arrays@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-multiline-arrays/-/prettier-plugin-multiline-arrays-1.0.0.tgz#03baae5e0b1977dd4ac4cf46bee63f9cb42164ef"
-  integrity sha512-BXsUjSjS7L/1wZRf3+xWsT8uGq9MpoWg6NA85fymBo/QNcxWpZXoF4bqIUDjwa/U/NaWnXdxMyb3Oh1vSKBz0w==
-  dependencies:
-    augment-vir "1.9.1"
 
 "prettier@>=2.2.1 <=2.3.0":
   version "2.3.0"

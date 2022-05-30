@@ -9,7 +9,6 @@ module.exports = {
     'plugin:import/recommended',
   ],
   rules: {
-    'array-element-newline': ['error', { minItems: 3 }],
     'no-restricted-imports': ['warn', { patterns: ['.*'] }],
     'import/order': 'error',
     '@typescript-eslint/no-unused-vars': 'error',

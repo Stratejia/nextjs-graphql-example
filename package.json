@@ -8,8 +8,8 @@
   "scripts": {
     "lint:staged": "lint-staged",
     "prepare": "husky install",
-    "prettier": "prettier . --quiet",
-    "prettier:write": "prettier . --quiet --write"
+    "prettier": "prettier .",
+    "prettier:write": "prettier . --write"
   },
   "devDependencies": {
     "husky": "^7.0.0",

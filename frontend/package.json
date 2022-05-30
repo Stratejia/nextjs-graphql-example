@@ -11,8 +11,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:staged": "lint-staged",
-    "prettier": "prettier . --quiet",
-    "prettier:write": "prettier . --quiet --write",
+    "prettier": "prettier .",
+    "prettier:write": "prettier . --write",
     "start": "next start",
     "storybook": "start-storybook -s ./public -p 6006",
     "storybook:build": "build-storybook -s ./public",
@@ -63,7 +63,6 @@
     "jest-environment-jsdom": "^28.1.0",
     "lint-staged": "^12.4.1",
     "prettier": "^2.6.2",
-    "prettier-plugin-multiline-arrays": "^1.0.0",
     "react-i18next": "^11.16.9",
     "react-test-renderer": "^18.1.0",
     "ts-jest": "^28.0.3",
@@ -73,7 +72,7 @@
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
       "eslint . --fix",
-      "prettier . --quiete --write"
+      "prettier . --write"
     ]
   }
 }
