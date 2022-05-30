@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { create } from 'react-test-renderer';
 import Page from 'components/common/layouts/Page';
-import withContexts from 'utils-test/withContexts';
+import withContexts from 'utils-tests/withContexts';
 
 describe('Page', () => {
   describe('Given children', () => {
