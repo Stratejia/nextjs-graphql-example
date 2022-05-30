@@ -146,9 +146,9 @@ function getAccounts() {
 
 Supported by linter: **NO**
 
-For readability and usability, we prefer using a single type as function param. This reduces ripple effect when we
-want to switch around params placement and lets the function user decide in which order params are sent (defined in
-type). This also reduces the amount of param type definition from n (number of values) to 1 (props type).
+For readability and usability, we prefer using a single type as function param. This reduces ripple effect when we want
+to switch around params placement and lets the function user decide in which order params are sent (defined in type).
+This also reduces the amount of param type definition from n (number of values) to 1 (props type).
 
 When there is a single param, you can choose to either keep it this way or use a props type. Your call.
 

@@ -16,13 +16,13 @@
     "strict": true,
     "target": "es5"
   },
-  "include": ["next-env.d.ts", "./src"],
+  "include": ["next-env.d.ts", "src"],
   "exclude": [
     "node_modules",
     ".storybook",
-    "utils-test",
-    "**/src/__stories__/**",
-    "**/src/__tests__/**",
-    "**/src/__stubs__/**"
+    "src/utils-tests",
+    "src/__stories__/**",
+    "src/__tests__/**",
+    "src/__stubs__/**"
   ]
 }
