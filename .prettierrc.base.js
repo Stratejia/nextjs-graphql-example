@@ -12,6 +12,4 @@ module.exports = {
   singleQuote: true,
   quoteProps: 'as-needed',
   useTabs: false,
-  plugins: ['./node_modules/prettier-plugin-multiline-arrays'],
-  multilineArraysWrapThreshold: 2,
 };
