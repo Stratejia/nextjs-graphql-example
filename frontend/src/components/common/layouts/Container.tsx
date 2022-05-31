@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components';
+import { Theme } from 'styles';
 
 const Container = styled.div(
-  ({ theme }) => css`
+  ({ theme }: { readonly theme: Theme }) => css`
     max-width: ${theme.spacing.container};
     width: 100%;
     margin-left: auto;

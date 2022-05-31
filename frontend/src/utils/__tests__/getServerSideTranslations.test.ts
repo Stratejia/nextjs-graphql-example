@@ -9,12 +9,13 @@ jest.mock('next-i18next/serverSideTranslations', () => ({
 }));
 
 // TODO: Necessary for mock to work, but imports should be first
+// eslint-disable-next-line import/first
 import getServerSideTranslations from 'utils/getServerSideTranslations';
 
 describe('getServerSideTranslations', () => {
   describe('Given locale and namespaces', () => {
     const locale = 'en';
-    const namespaces: Namespace[] = ['common'];
+    const namespaces: readonly Namespace[] = ['common'];
 
     test('Then get server side translations', async () => {
       const serverSideTranslations = await getServerSideTranslations({ locale, namespaces });

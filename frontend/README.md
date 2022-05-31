@@ -28,7 +28,9 @@ yarn build
 
 ```bash
 yarn lint
+yarn lint:styles # Lint styles (styled-components)
 yarn lint:fix # Fix code style using eslint
+yarn lint:styles:fix # Fix code style for styles (styled-components)
 yarn lint:staged # Run code style fix on staged files
 
 yarn prettier

@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
 import Typography from 'components/common/typography/Typography';
+import { Theme } from 'styles';
 
 const AppTitle = styled.h1(
-  ({ theme }) => css`
+  ({ theme }: { readonly theme: Theme }) => css`
     ${Typography};
     text-align: center;
     font-size: ${theme.fonts.sizes.xxl};

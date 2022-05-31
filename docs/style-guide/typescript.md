@@ -2,7 +2,8 @@
 
 ## No. Damn. Classes.
 
-Supported by linter: **NO**
+Supported by linter: Yes, via
+[`functional/no-class`](https://github.com/jonaskello/eslint-plugin-functional/blob/master/docs/rules/no-class.md)
 
 We keep this codebase FP-oriented, following the KISS principle. No classes should be present to avoid dealing with
 state induced problems.
@@ -44,9 +45,10 @@ const accounts = await accountService.getAccounts();
 
 ## Prefer types to interfaces
 
-Supported by linter: **NO**
+Supported by linter: Yes, via
+[`eslint-plugin-prefer-type-alias`](https://github.com/otofu-square/eslint-plugin-prefer-type-alias)
 
-Interfaces are useless when types exist. They both do the same job, but types are more strict and are more FP-oriented.
+Interfaces are useless when types exist. They both do the same job, but types are stricter and are more FP-oriented.
 
 [More info](https://fettblog.eu/tidy-typescript-prefer-type-aliases/)
 
@@ -80,7 +82,7 @@ type AccountRepository = ReturnType<typeof makeAccountRepository>;
 
 ## No arrow functions
 
-Supported by linter: **NO** ([might help](https://mysticatea.github.io/eslint-plugin-es/rules/no-arrow-functions.html))
+Supported by linter: Yes, via [`func-style`](https://eslint.org/docs/rules/func-style)
 
 Arrow functions can bring confusion, it's hard to see what is a value and what is a function. To avoid this situation,
 always use `function`.
@@ -193,8 +195,9 @@ const accountUri = getAccountUri('https://example.com');
 
 ## Imports first, exports last
 
-Supported by linter: **NO**
-([might help](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/exports-last.md))
+Supported by linter: Yes, via
+[`import/first`](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/first.md) and
+[`import/exports-last`](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/exports-last.md)
 
 We should read script files (including JS/TS) as functions, with params (imports) and returned values (exports). This
 means files should always before with imports and end with exports.
@@ -237,7 +240,8 @@ export default AccountPage;
 
 ## Avoid state mutation
 
-Supported by linter: **NO**
+Supported by linter: Yes, via
+[`functional/immutable-data`](https://github.com/jonaskello/eslint-plugin-functional/blob/master/docs/rules/immutable-data.md)
 
 Always make sure not to mutate the state without re-creating it. Best example is mutating function params. Remember to
 always return the new value.
@@ -264,7 +268,7 @@ function updateFirstName({ account, firstName }: UpdateFirstNameParams) {
 
 ## No inverted if statement
 
-Supported by linter: **NO**
+Supported by linter: Yes, via [`no-negated-condition`](https://eslint.org/docs/rules/no-negated-condition)
 
 In an `if/else` statement, we want to avoid having a negation as the main condition. This helps the readability of our
 code. Instead, we want to have a positive condition for the `if` and let the negation be part of the `else` statement.
@@ -300,7 +304,7 @@ if (!account.hasPlan) {
 
 ## No unnecessary else statement
 
-Supported by linter: **NO**
+Supported by linter: Yes, via [`no-else-return`](https://eslint.org/docs/rules/no-else-return)
 
 In the case of a returned value, it is unnecessary to return in an else statement when the if statement returns.
 
@@ -331,7 +335,7 @@ return account.hasPlan ? createBillForPlan(account) : createBillForAccount(accou
 
 ## No complex ternary if statement
 
-Supported by linter: **NO**
+Supported by linter: Partly, via [`no-nested-ternary`](https://eslint.org/docs/rules/no-nested-ternary)
 
 Ternary if statements are nice, but they can get overly complicated. This can occur when they hold much logic or when
 they are chained together.
@@ -368,4 +372,80 @@ Correct:
 
 ```ts
 return account.hasPlan ? createBillingResponseForPlan(account.plan) : createBillingResponseForAccount(account); // In this example, we'd throw an error on a condition in this function
+```
+
+## Prefer array functions over for-loops
+
+Supported by linter: **NO**
+
+Incorrect:
+
+```ts
+for (const element in array) {
+  console.log(element);
+}
+```
+
+```ts
+const newArray = [];
+for (const element in array) {
+  newArray.push(convert(element));
+}
+```
+
+```ts
+const newArray = [];
+for (const element in array) {
+  if (someFilteringFunction(element)) {
+    newArray.push(element);
+  }
+}
+```
+
+Correct:
+
+```ts
+array.forEach(console.log);
+array.forEach(element => someFunction(element, anotherValue));
+```
+
+```ts
+const newArray = array.map(convert);
+```
+
+```ts
+const newArray = array.filter(someFilteringFunction);
+```
+
+## Use Record over switch-case statements
+
+Supported by linter: **NO**
+
+Incorrect:
+
+```ts
+// Definition
+function getColors(mode: ThemeMode) {
+  switch (mode) {
+    default:
+    case 'light':
+      return lightColors;
+    case 'dark':
+      return darkColors;
+  }
+}
+
+// Usage
+const colors = getColors(mode);
+```
+
+```ts
+// Definition
+const modeToColors: Record<ThemeMode, Colors> = {
+  light: lightColors,
+  dark: darkColors,
+};
+
+// Usage
+const colors = modeToColors[mode];
 ```

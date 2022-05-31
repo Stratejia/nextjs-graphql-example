@@ -6,8 +6,8 @@ import { ThemeMode } from 'types/styles';
 const defaultMode = 'dark';
 
 type Props = {
-  children: React.ReactNode;
-  initialMode?: ThemeMode;
+  readonly children: React.ReactNode;
+  readonly initialMode?: ThemeMode;
 };
 
 function ThemeProvider({ children, initialMode = defaultMode }: Props) {
@@ -30,9 +30,9 @@ function ThemeProvider({ children, initialMode = defaultMode }: Props) {
 }
 
 const ThemeContext = React.createContext<{
-  mode: ThemeMode;
-  setMode: (mode: ThemeMode) => void;
-  switchMode: () => void;
+  readonly mode: ThemeMode;
+  readonly setMode: (mode: ThemeMode) => void;
+  readonly switchMode: () => void;
 }>({ mode: defaultMode, setMode: () => void 0, switchMode: () => void 0 });
 
 export default ThemeProvider;

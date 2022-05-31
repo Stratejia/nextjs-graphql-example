@@ -1,9 +1,10 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Container from 'components/common/layouts/Container';
+import { Theme } from 'styles';
 
 type Props = {
-  children: React.ReactNode;
+  readonly children: React.ReactNode;
 };
 
 function Page({ children }: Props) {
@@ -15,7 +16,7 @@ function Page({ children }: Props) {
 }
 
 const ContentContainer = styled.div(
-  ({ theme }) => css`
+  ({ theme }: { readonly theme: Theme }) => css`
     margin: ${theme.spacing.xs};
   `,
 );

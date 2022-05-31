@@ -44,6 +44,7 @@ yarn
 ### Lint app
 
 ```bash
+yarn lint:ls # Run code style for file names
 yarn lint:staged # Run code style fix on staged files
 
 yarn prettier

@@ -27,7 +27,7 @@ function Home() {
   );
 }
 
-async function getStaticProps({ locale }: { locale: Locale }) {
+async function getStaticProps({ locale }: { readonly locale: Locale }) {
   return {
     props: {
       ...(await getServerSideTranslations({ locale, namespaces: ['home'] })),
