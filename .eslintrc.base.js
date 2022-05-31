@@ -17,6 +17,8 @@ module.exports = {
     'func-style': ['warn', 'declaration'],
     'no-restricted-imports': ['warn', { patterns: ['.*'] }],
     'import/order': 'warn',
+    'import/first': 'warn',
+    'import/exports-last': 'warn',
     'functional/no-class': 'error',
     'functional/no-return-void': 'off',
     'functional/no-expression-statement': 'off',

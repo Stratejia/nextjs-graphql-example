@@ -195,8 +195,9 @@ const accountUri = getAccountUri('https://example.com');
 
 ## Imports first, exports last
 
-Supported by linter: **NO**
-([might help](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/exports-last.md))
+Supported by linter: Yes, via
+[`import/first`](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/first.md) and
+[`import/exports-last`](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/exports-last.md)
 
 We should read script files (including JS/TS) as functions, with params (imports) and returned values (exports). This
 means files should always before with imports and end with exports.

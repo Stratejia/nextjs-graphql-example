@@ -1,5 +1,8 @@
 import { Namespace } from 'types/i18n';
 
+// TODO: Necessary for mock to work, but imports should be first
+import getServerSideTranslations from 'utils/getServerSideTranslations';
+
 const stubServerSideTranslations = 'dummyValue';
 const mockServerSideTranslations = jest.fn().mockResolvedValue(stubServerSideTranslations);
 
@@ -7,9 +10,6 @@ jest.mock('next-i18next/serverSideTranslations', () => ({
   __esModule: true,
   serverSideTranslations: mockServerSideTranslations,
 }));
-
-// TODO: Necessary for mock to work, but imports should be first
-import getServerSideTranslations from 'utils/getServerSideTranslations';
 
 describe('getServerSideTranslations', () => {
   describe('Given locale and namespaces', () => {
