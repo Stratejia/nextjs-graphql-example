@@ -3547,7 +3547,7 @@
     eslint-scope "^5.1.1"
     eslint-utils "^3.0.0"
 
-"@typescript-eslint/utils@5.27.0":
+"@typescript-eslint/utils@5.27.0", "@typescript-eslint/utils@^5.10.2":
   version "5.27.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/utils/-/utils-5.27.0.tgz#d0021cbf686467a6a9499bd0589e19665f9f7e71"
   integrity sha512-nZvCrkIJppym7cIbP3pOwIkAefXOmfGPnCM0LQfzNaKxJHI6VjI8NC662uoiPlaf5f6ymkTy9C3NQXev2mdXmA==
@@ -5719,6 +5719,13 @@ deep-object-diff@^1.1.0:
   resolved "https://registry.yarnpkg.com/deep-object-diff/-/deep-object-diff-1.1.7.tgz#348b3246f426427dd633eaa50e1ed1fc2eafc7e4"
   integrity sha512-QkgBca0mL08P6HiOjoqvmm6xOAl2W6CT2+34Ljhg0OeFan8cwlcdq8jrLKsBBuUFAZLsN5b6y491KdKEoSo9lg==
 
+deepmerge-ts@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/deepmerge-ts/-/deepmerge-ts-4.0.3.tgz#495b11315d082fc715e101a1b0e41cbb136becfb"
+  integrity sha512-kRBBqKdfhdZ+LEBkyE0Y7Yu7Lm277HOKpVmpecaEzzD3Krne9uO13Wqi7sNJ9S4FDmCgwjiWj8UhXo5OgjOIwg==
+  dependencies:
+    is-plain-object "^5.0.0"
+
 deepmerge@^4.2.2:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.2.2.tgz#44d2ea3679b8f4d4ffba33f03d865fc1e7bf4955"
@@ -6250,6 +6257,15 @@ eslint-module-utils@^2.7.3:
   dependencies:
     debug "^3.2.7"
     find-up "^2.1.0"
+
+eslint-plugin-functional@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-functional/-/eslint-plugin-functional-4.2.1.tgz#c486f15695a31f916847c89f0f85a09c8ee423c6"
+  integrity sha512-j16ozgXrr0UdPBirdbgDZgRBPr9Prj3j1xoisE435wzRDMWQlSHHJ41LCzNrlfGDb7OFAyXVcVatVwALz2jckw==
+  dependencies:
+    "@typescript-eslint/utils" "^5.10.2"
+    deepmerge-ts "^4.0.3"
+    escape-string-regexp "^4.0.0"
 
 eslint-plugin-import@^2.26.0:
   version "2.26.0"
@@ -8024,7 +8040,7 @@ is-plain-obj@^2.0.0:
   resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-2.1.0.tgz#45e42e37fccf1f40da8e5f76ee21515840c09287"
   integrity sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==
 
-is-plain-object@5.0.0:
+is-plain-object@5.0.0, is-plain-object@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/is-plain-object/-/is-plain-object-5.0.0.tgz#4427f50ab3429e9025ea7d52e9043a9ef4159344"
   integrity sha512-VRSzKkbMm5jMDoKLbltAkFQ5Qr7VDiTFGXxYFXXowVj387GeGNOCsOH6Msy00SGZ3Fp84b1Naa1psqgcCIEP5Q==

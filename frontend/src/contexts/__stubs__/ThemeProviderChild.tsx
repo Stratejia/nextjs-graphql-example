@@ -4,7 +4,7 @@ import { ThemeContext } from 'contexts/ThemeProvider';
 import { ThemeMode } from 'types/styles';
 
 type Props = {
-  modeToSet: ThemeMode;
+  readonly modeToSet: ThemeMode;
 };
 
 function ThemeProviderChild({ modeToSet }: Props) {

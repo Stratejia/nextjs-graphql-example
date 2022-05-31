@@ -14,6 +14,8 @@ const palette = {
   },
 };
 
+type Colors = typeof lightColors;
+
 const lightColors = {
   palette,
   background: '#fff',
@@ -98,14 +100,9 @@ const darkColors = {
   },
 };
 
-function getColors(mode: ThemeMode) {
-  switch (mode) {
-    default:
-    case 'light':
-      return lightColors;
-    case 'dark':
-      return darkColors;
-  }
-}
+const modeToColors: Record<ThemeMode, Colors> = {
+  light: lightColors,
+  dark: darkColors,
+};
 
-export { getColors };
+export { modeToColors };

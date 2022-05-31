@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
 import Container from 'components/common/layouts/Container';
 
@@ -8,11 +7,11 @@ const config = {
 };
 
 type TemplateProps = {
-  children?: {
-    style: {
-      width: string;
-      height: string;
-      backgroundColor: string;
+  readonly children?: {
+    readonly style: {
+      readonly width: string;
+      readonly height: string;
+      readonly backgroundColor: string;
     };
   };
 };

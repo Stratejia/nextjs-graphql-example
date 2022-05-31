@@ -2,7 +2,8 @@
 
 ## No. Damn. Classes.
 
-Supported by linter: **NO**
+Supported by linter: Yes, via
+[`functional/no-class`](https://github.com/jonaskello/eslint-plugin-functional/blob/master/docs/rules/no-class.md)
 
 We keep this codebase FP-oriented, following the KISS principle. No classes should be present to avoid dealing with
 state induced problems.
@@ -237,7 +238,8 @@ export default AccountPage;
 
 ## Avoid state mutation
 
-Supported by linter: **NO**
+Supported by linter: Yes, via
+[`functional/immutable-data`](https://github.com/jonaskello/eslint-plugin-functional/blob/master/docs/rules/immutable-data.md)
 
 Always make sure not to mutate the state without re-creating it. Best example is mutating function params. Remember to
 always return the new value.

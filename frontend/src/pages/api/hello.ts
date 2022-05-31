@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 type Data = {
-  name: string;
+  readonly name: string;
 };
 
 // TODO: Remove this, it's boilerplate code
