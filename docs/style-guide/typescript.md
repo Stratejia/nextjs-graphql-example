@@ -268,7 +268,7 @@ function updateFirstName({ account, firstName }: UpdateFirstNameParams) {
 
 ## No inverted if statement
 
-Supported by linter: **NO**
+Supported by linter: Yes, via [`no-negated-condition`](https://eslint.org/docs/rules/no-negated-condition)
 
 In an `if/else` statement, we want to avoid having a negation as the main condition. This helps the readability of our
 code. Instead, we want to have a positive condition for the `if` and let the negation be part of the `else` statement.

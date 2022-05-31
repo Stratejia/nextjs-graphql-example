@@ -16,6 +16,7 @@ module.exports = {
     'prefer-template': 'warn',
     'func-style': ['warn', 'declaration'],
     'no-restricted-imports': ['warn', { patterns: ['.*'] }],
+    'no-negated-condition': 'warn',
     'import/order': 'warn',
     'import/first': 'warn',
     'import/exports-last': 'warn',
