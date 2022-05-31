@@ -45,7 +45,8 @@ const accounts = await accountService.getAccounts();
 
 ## Prefer types to interfaces
 
-Supported by linter: **NO**
+Supported by linter: Yes, via
+[`eslint-plugin-prefer-type-alias`](https://github.com/otofu-square/eslint-plugin-prefer-type-alias)
 
 Interfaces are useless when types exist. They both do the same job, but types are stricter and are more FP-oriented.
 
