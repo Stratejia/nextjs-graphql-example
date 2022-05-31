@@ -304,7 +304,7 @@ if (!account.hasPlan) {
 
 ## No unnecessary else statement
 
-Supported by linter: **NO**
+Supported by linter: Yes, via [`no-else-return`](https://eslint.org/docs/rules/no-else-return)
 
 In the case of a returned value, it is unnecessary to return in an else statement when the if statement returns.
 
@@ -335,7 +335,7 @@ return account.hasPlan ? createBillForPlan(account) : createBillForAccount(accou
 
 ## No complex ternary if statement
 
-Supported by linter: **NO**
+Supported by linter: Partly, via [`no-nested-ternary`](https://eslint.org/docs/rules/no-nested-ternary)
 
 Ternary if statements are nice, but they can get overly complicated. This can occur when they hold much logic or when
 they are chained together.
