@@ -30,5 +30,7 @@ jobs:
           key: node_modules-${{ hashFiles('yarn.lock') }}
       - name: Install dependencies
         run: yarn
+      - name: Run lint on file names
+        run: yarn lint:ls
       - name: Run prettier
         run: yarn prettier
