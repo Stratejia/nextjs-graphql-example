@@ -47,7 +47,7 @@ const accounts = await accountService.getAccounts();
 
 Supported by linter: **NO**
 
-Interfaces are useless when types exist. They both do the same job, but types are more strict and are more FP-oriented.
+Interfaces are useless when types exist. They both do the same job, but types are stricter and are more FP-oriented.
 
 [More info](https://fettblog.eu/tidy-typescript-prefer-type-aliases/)
 

@@ -28,13 +28,13 @@ module.exports = {
       rules: {
         'functional/no-expression-statement': 'off',
         'functional/immutable-data': 'off',
-      }
+      },
     },
     {
       files: ['**/__tests__/**'],
       rules: {
         'functional/no-expression-statement': 'off',
-      }
-    }
-  ]
+      },
+    },
+  ],
 };
