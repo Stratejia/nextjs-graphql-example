@@ -11,15 +11,17 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:staged": "lint-staged",
+    "lint:styles": "stylelint src/**/*.{ts,tsx}",
+    "lint:styles:fix": "stylelint src/**/*.{ts,tsx} --fix",
     "prettier": "prettier .",
     "prettier:write": "prettier . --write",
     "start": "next start",
     "storybook": "start-storybook -s ./public -p 6006",
     "storybook:build": "build-storybook -s ./public",
     "test": "jest --watch",
-    "test:update": "jest -u",
+    "test:ci": "jest --ci",
     "test:coverage": "jest --coverage",
-    "test:ci": "jest --ci"
+    "test:update": "jest -u"
   },
   "dependencies": {
     "next": "^12.1.6",
@@ -67,6 +69,10 @@
     "prettier": "^2.6.2",
     "react-i18next": "^11.16.9",
     "react-test-renderer": "^18.1.0",
+    "stylelint": "^14.8.5",
+    "stylelint-config-recommended": "^7.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
     "ts-jest": "^28.0.3",
     "tsconfig-paths-webpack-plugin": "^3.5.2",
     "typescript": "^4.6.4"
@@ -74,7 +80,8 @@
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
       "eslint . --fix",
-      "prettier . --write"
+      "prettier . --write",
+      "stylelint src/**/*.{ts,tsx} --fix"
     ]
   }
 }
