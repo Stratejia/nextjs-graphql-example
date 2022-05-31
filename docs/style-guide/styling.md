@@ -1,5 +1,8 @@
 # Styling
 
+We enforce code style with [stylelint for styled-components](https://styled-components.com/docs/tooling#stylelint).
+Other than that, some rules are listed here.
+
 ## Only styled-components
 
 Supported by linter: **NO**
