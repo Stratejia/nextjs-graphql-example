@@ -82,7 +82,7 @@ type AccountRepository = ReturnType<typeof makeAccountRepository>;
 
 ## No arrow functions
 
-Supported by linter: **NO** ([might help](https://mysticatea.github.io/eslint-plugin-es/rules/no-arrow-functions.html))
+Supported by linter: Yes, via [`func-style`](https://eslint.org/docs/rules/func-style)
 
 Arrow functions can bring confusion, it's hard to see what is a value and what is a function. To avoid this situation,
 always use `function`.

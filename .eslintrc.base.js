@@ -14,6 +14,7 @@ module.exports = {
   ],
   rules: {
     'prefer-template': 'warn',
+    'func-style': ['warn', 'declaration'],
     'no-restricted-imports': ['warn', { patterns: ['.*'] }],
     'import/order': 'warn',
     'functional/no-class': 'error',
