@@ -1,6 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['functional', '@typescript-eslint', 'prettier'],
+  plugins: ['functional', '@typescript-eslint', 'prettier', 'jest'],
   extends: [
     'plugin:functional/external-recommended',
     'plugin:functional/recommended',
@@ -39,11 +39,8 @@ module.exports = {
         'functional/immutable-data': 'off',
       },
     },
-    {
-      files: ['**/__tests__/**'],
-      rules: {
-        'functional/no-expression-statement': 'off',
-      },
-    },
   ],
+  env: {
+    'jest/globals': true
+  }
 };
