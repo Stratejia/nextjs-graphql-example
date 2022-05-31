@@ -13,6 +13,7 @@ module.exports = {
     'plugin:import/recommended',
   ],
   rules: {
+    'prefer-template': 'warn',
     'no-restricted-imports': ['warn', { patterns: ['.*'] }],
     'import/order': 'warn',
     'functional/no-class': 'error',
