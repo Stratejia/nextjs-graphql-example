@@ -13,7 +13,7 @@ module.exports = {
     'plugin:import/recommended',
   ],
   rules: {
-    'curly': 'warn',
+    curly: 'warn',
     'prefer-template': 'warn',
     'func-style': ['warn', 'declaration'],
     'no-restricted-imports': ['warn', { patterns: ['.*'] }],

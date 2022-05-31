@@ -373,3 +373,79 @@ Correct:
 ```ts
 return account.hasPlan ? createBillingResponseForPlan(account.plan) : createBillingResponseForAccount(account); // In this example, we'd throw an error on a condition in this function
 ```
+
+## Prefer array functions over for-loops
+
+Supported by linter: **NO**
+
+Incorrect:
+
+```ts
+for (const element in array) {
+  console.log(element);
+}
+```
+
+```ts
+const newArray = [];
+for (const element in array) {
+  newArray.push(convert(element));
+}
+```
+
+```ts
+const newArray = [];
+for (const element in array) {
+  if (someFilteringFunction(element)) {
+    newArray.push(element);
+  }
+}
+```
+
+Correct:
+
+```ts
+array.forEach(console.log);
+array.forEach(element => someFunction(element, anotherValue));
+```
+
+```ts
+const newArray = array.map(convert);
+```
+
+```ts
+const newArray = array.filter(someFilteringFunction);
+```
+
+## Use Record over switch-case statements
+
+Supported by linter: **NO**
+
+Incorrect:
+
+```ts
+// Definition
+function getColors(mode: ThemeMode) {
+  switch (mode) {
+    default:
+    case 'light':
+      return lightColors;
+    case 'dark':
+      return darkColors;
+  }
+}
+
+// Usage
+const colors = getColors(mode);
+```
+
+```ts
+// Definition
+const modeToColors: Record<ThemeMode, Colors> = {
+  light: lightColors,
+  dark: darkColors,
+};
+
+// Usage
+const colors = modeToColors[mode];
+```
