@@ -43,7 +43,7 @@ jobs:
       - name: Run lint
         run: yarn lint
       - name: Run lint styles
-        run: yarn lint:style
+        run: yarn lint:styles
       - name: Run prettier
         run: yarn prettier
       - name: Run tests with coverage
