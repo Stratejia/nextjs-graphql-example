@@ -2,8 +2,11 @@ import React from 'react';
 import Page from 'components/common/layouts/Page';
 
 const config = {
-  title: 'Components/Layouts/Page',
+  title: 'Components/Common/Layouts/Page',
   component: Page,
+  parameters: {
+    layout: 'fullscreen',
+  },
 };
 
 type TemplateProps = {

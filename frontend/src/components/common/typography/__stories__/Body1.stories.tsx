@@ -2,7 +2,7 @@ import React from 'react';
 import Body1 from 'components/common/typography/Body1';
 
 const config = {
-  title: 'Components/Typography/Body1',
+  title: 'Components/Common/Typography/Body1',
   component: Body1,
 };
 

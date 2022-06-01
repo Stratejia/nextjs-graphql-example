@@ -2,19 +2,42 @@
 
 exports[`Home When rendering Then match snapshot 1`] = `
 <div
-  className="sc-bczRLJ eGDUch"
+  className="sc-eCYdqJ dxffNO"
 >
   <div
-    className="sc-gsnTZi ksunwW"
+    className="sc-dkzDqf dzbSaz"
+  >
+    <span
+      className="sc-gsnTZi bDiZFv"
+    >
+      nextRecipes
+    </span>
+    <div
+      className="sc-hKMtZM kWcKmy"
+    >
+      <span
+        className="sc-gsnTZi bDiZFv"
+      >
+        Lang
+      </span>
+      <span
+        className="sc-gsnTZi bDiZFv"
+      >
+        Theme
+      </span>
+      <span
+        className="sc-gsnTZi bDiZFv"
+      >
+        User
+      </span>
+    </div>
+  </div>
+  <div
+    className="sc-bczRLJ sc-jSMfEi eGDUch kXwpjV"
   >
     <main>
-      <h1
-        className="sc-dkzDqf gkDXsv"
-      >
-        nextRecipes
-      </h1>
       <span
-        className="sc-hKMtZM gnmBBv"
+        className="sc-gsnTZi bDiZFv"
       >
         websiteAboutRecipes
       </span>

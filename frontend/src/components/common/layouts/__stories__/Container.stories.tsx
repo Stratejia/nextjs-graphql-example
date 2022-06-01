@@ -2,8 +2,11 @@ import React from 'react';
 import Container from 'components/common/layouts/Container';
 
 const config = {
-  title: 'Components/Layouts/Container',
+  title: 'Components/Common/Layouts/Container',
   component: Container,
+  parameters: {
+    layout: 'fullscreen',
+  },
 };
 
 type TemplateProps = {

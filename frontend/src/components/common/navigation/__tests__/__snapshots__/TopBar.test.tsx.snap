@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopBar When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi dyNsfE"
+>
+  <span
+    className="sc-bczRLJ dqVkrV"
+  >
+    nextRecipes
+  </span>
+  <div
+    className="sc-dkzDqf iopiUR"
+  >
+    <span
+      className="sc-bczRLJ dqVkrV"
+    >
+      Lang
+    </span>
+    <span
+      className="sc-bczRLJ dqVkrV"
+    >
+      Theme
+    </span>
+    <span
+      className="sc-bczRLJ dqVkrV"
+    >
+      User
+    </span>
+  </div>
+</div>
+`;
