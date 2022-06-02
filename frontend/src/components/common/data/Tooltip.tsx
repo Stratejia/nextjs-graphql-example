@@ -2,12 +2,12 @@ import React, { ReactElement } from 'react';
 import styled, { css } from 'styled-components';
 import Typography from 'components/common/typography/Typography';
 
-type Props = {
+type TooltipProps = {
   readonly children: ReactElement;
   readonly title: string;
 };
 
-function Tooltip({ children, title }: Props) {
+function Tooltip({ children, title }: TooltipProps) {
   return (
     <TooltipContainer>
       {children}
@@ -46,3 +46,4 @@ const TooltipContainer = styled.div`
 `;
 
 export default Tooltip;
+export type { TooltipProps };

@@ -72,3 +72,4 @@ const StyledButton = styled.button<{ readonly variant: Variant }>(
 );
 
 export default Button;
+export type { ButtonProps };

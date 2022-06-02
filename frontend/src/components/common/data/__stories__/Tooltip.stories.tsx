@@ -1,19 +1,14 @@
 import React from 'react';
 import Body1 from 'components/common/typography/Body1';
-import Tooltip from 'components/common/data/Tooltip';
+import Tooltip, { TooltipProps } from 'components/common/data/Tooltip';
 
 const config = {
   title: 'Components/Common/Data/Tooltip',
   component: Tooltip,
 };
 
-type TemplateProps = {
-  readonly children: React.ReactElement;
-  readonly title: string;
-};
-
-function Template({ children, title }: TemplateProps) {
-  return <Tooltip title={title}>{children}</Tooltip>;
+function Template(props: TooltipProps) {
+  return <Tooltip {...props} />;
 }
 
 const Basic = Template.bind({}) as any;
