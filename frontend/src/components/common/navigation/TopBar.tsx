@@ -3,8 +3,6 @@ import styled, { css } from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import Body1 from 'components/common/typography/Body1';
 import { Theme } from 'styles';
-import { Locale } from 'types/i18n';
-import getServerSideTranslations from 'utils/getServerSideTranslations';
 
 function TopBar() {
   const { t } = useTranslation();
@@ -22,14 +20,6 @@ function TopBar() {
       </SettingsContainer>
     </TopBarContainer>
   );
-}
-
-async function getStaticProps({ locale }: { readonly locale: Locale }) {
-  return {
-    props: {
-      ...(await getServerSideTranslations({ locale, namespaces: ['common'] })),
-    },
-  };
 }
 
 const TopBarContainer = styled.div(
@@ -52,4 +42,3 @@ const SettingsContainer = styled.div(
 );
 
 export default TopBar;
-export { getStaticProps };

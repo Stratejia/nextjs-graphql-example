@@ -27,7 +27,8 @@ function Home() {
 async function getStaticProps({ locale }: { readonly locale: Locale }) {
   return {
     props: {
-      ...(await getServerSideTranslations({ locale, namespaces: ['home'] })),
+      // TODO: 'common' is used by TopBar. Isn't there a way to do this in the component?
+      ...(await getServerSideTranslations({ locale, namespaces: ['common', 'home'] })),
     },
   };
 }

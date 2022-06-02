@@ -41,6 +41,7 @@ yarn prettier:write # Fix code style using prettier
 
 ```bash
 yarn test
+yarn test:watch # Watch changes
 yarn test:update # Update snapshots
 yarn test:coverage # Display code coverage
 yarn test:ci # Run tests with CI environment

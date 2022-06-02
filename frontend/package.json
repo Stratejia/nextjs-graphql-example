@@ -18,10 +18,11 @@
     "start": "next start",
     "storybook": "start-storybook -s ./public -p 6006",
     "storybook:build": "build-storybook -s ./public",
-    "test": "jest --watch",
+    "test": "jest",
     "test:ci": "jest --ci",
     "test:coverage": "jest --coverage",
-    "test:update": "jest -u"
+    "test:update": "jest -u",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "next": "^12.1.6",
