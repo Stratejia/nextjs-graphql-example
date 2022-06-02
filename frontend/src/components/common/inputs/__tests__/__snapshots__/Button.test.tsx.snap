@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Given title and children When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf daSDQR"
+      disabled={false}
+      type="button"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
