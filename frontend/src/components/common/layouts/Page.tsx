@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import Container from 'components/common/layouts/Container';
 import TopBar from 'components/common/navigation/TopBar';
-import { Theme } from 'styles';
+import { Theme } from 'styles/theme';
 
 type Props = {
   readonly children: React.ReactNode;

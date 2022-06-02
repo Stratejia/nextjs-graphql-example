@@ -22,6 +22,7 @@ const contexts = [
     title: 'Theme',
     components: [ThemeProvider],
     params: [
+      // TODO: This logic makes us unable to useThemeContext. We need to use the real ThemeProvider.
       { name: 'Light', props: { theme: getTheme('light') }, default: defaultMode === 'light' },
       { name: 'Dark', props: { theme: getTheme('dark') }, default: defaultMode === 'dark' },
     ],

@@ -1,5 +1,3 @@
-import { useTheme as useStyledComponentsTheme } from 'styled-components';
-import GlobalStyle from 'styles/GlobalStyle';
 import { modeToColors } from 'styles/colors';
 import spacing from 'styles/spacing';
 import fonts from 'styles/fonts';
@@ -16,11 +14,5 @@ function getTheme(mode: ThemeMode) {
   };
 }
 
-// TODO: This is deadcode for now, remove later if unused
-function useTheme() {
-  const theme = useStyledComponentsTheme();
-  return theme as Theme;
-}
-
-export { GlobalStyle, getTheme, useTheme };
+export { getTheme };
 export type { Theme };

@@ -41,6 +41,6 @@ module.exports = {
     },
   ],
   env: {
-    'jest/globals': true
-  }
+    'jest/globals': true,
+  },
 };
