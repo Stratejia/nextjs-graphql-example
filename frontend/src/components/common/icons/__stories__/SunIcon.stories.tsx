@@ -1,5 +1,6 @@
 import React from 'react';
 import SunIcon from 'components/common/icons/SunIcon';
+import withIconWrapper from 'utils-stories/withIconWrapper';
 
 const config = {
   title: 'Components/Common/Icons/SunIcon',
@@ -7,7 +8,7 @@ const config = {
 };
 
 function Template() {
-  return <SunIcon />;
+  return withIconWrapper(<SunIcon />);
 }
 
 const Basic = Template.bind({}) as any;
