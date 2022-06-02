@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Container from 'components/common/layouts/Container';
+import TopBar from 'components/common/navigation/TopBar';
 import { Theme } from 'styles';
 
 type Props = {
@@ -9,15 +10,22 @@ type Props = {
 
 function Page({ children }: Props) {
   return (
-    <Container>
+    <PageContainer>
+      <TopBar />
       <ContentContainer>{children}</ContentContainer>
-    </Container>
+    </PageContainer>
   );
 }
 
-const ContentContainer = styled.div(
+const PageContainer = styled.div(
   ({ theme }: { readonly theme: Theme }) => css`
-    margin: ${theme.spacing.xs};
+    background-color: ${theme.colors.background};
+  `,
+);
+
+const ContentContainer = styled(Container)(
+  ({ theme }: { readonly theme: Theme }) => css`
+    padding: ${theme.spacing.s} 0;
   `,
 );
 

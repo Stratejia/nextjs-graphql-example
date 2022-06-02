@@ -2,7 +2,7 @@ import React from 'react';
 import AppTitle from 'components/common/typography/AppTitle';
 
 const config = {
-  title: 'Components/Typography/AppTitle',
+  title: 'Components/Common/Typography/AppTitle',
   component: AppTitle,
 };
 

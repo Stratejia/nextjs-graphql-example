@@ -4,6 +4,9 @@ import Home from 'pages/index.page';
 const config = {
   title: 'Pages/Home',
   component: Home,
+  parameters: {
+    layout: 'fullscreen',
+  },
 };
 
 function Basic() {
