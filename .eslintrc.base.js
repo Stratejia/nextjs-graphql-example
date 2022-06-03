@@ -14,6 +14,7 @@ module.exports = {
   ],
   rules: {
     curly: 'warn',
+    eqeqeq: 'warn',
     'prefer-template': 'warn',
     'func-style': ['warn', 'declaration'],
     'no-restricted-imports': ['warn', { patterns: ['.*'] }],
