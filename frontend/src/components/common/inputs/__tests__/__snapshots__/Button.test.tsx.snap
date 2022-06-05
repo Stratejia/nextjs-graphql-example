@@ -6,7 +6,7 @@ exports[`Button Given title and children When rendering Then match snapshot 1`] 
 >
   <div>
     <button
-      className="sc-dkzDqf daSDQR"
+      className="sc-dkzDqf hKofOt"
       disabled={false}
       type="button"
     >

@@ -22,7 +22,7 @@ exports[`TopBar When rendering Then match snapshot 1`] = `
     >
       <div>
         <button
-          className="sc-dkzDqf iaZNUd"
+          className="sc-dkzDqf iyuPKR"
           disabled={false}
           onClick={[Function]}
           type="button"

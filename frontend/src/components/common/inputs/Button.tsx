@@ -19,7 +19,7 @@ function Button({ title, children, onClick, disabled = false, type = 'button', v
   return (
     <Tooltip title={title}>
       <div>
-        <StyledButton type={type} variant={variant} onClick={onClick} disabled={disabled}>
+        <StyledButton type={type} $variant={variant} $disabled={disabled} onClick={onClick} disabled={disabled}>
           {children}
         </StyledButton>
       </div>
@@ -37,8 +37,8 @@ const ButtonTypography = css(
   `,
 );
 
-const StyledButton = styled.button<{ readonly variant: Variant }>(
-  ({ variant, theme }) => css`
+const StyledButton = styled.button<{ readonly $variant: Variant; readonly $disabled: boolean }>(
+  ({ $variant, $disabled, theme }) => css`
     ${ButtonTypography};
     display: flex;
     border-radius: ${theme.spacing.xxs};
@@ -52,7 +52,7 @@ const StyledButton = styled.button<{ readonly variant: Variant }>(
       box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
       color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 
-    ${variant === 'contained' &&
+    ${$variant === 'contained' &&
     `
     color: ${theme.colors.onPrimary};
     background-color: ${theme.colors.palette.primary.main};
@@ -62,11 +62,16 @@ const StyledButton = styled.button<{ readonly variant: Variant }>(
     }
   `}
 
-    ${variant === 'outlined' &&
+    ${$variant === 'outlined' &&
     `
     :hover {
       background-color: ${theme.colors.surface};
     }
+  `}
+
+  ${$disabled &&
+    `
+    cursor: not-allowed;
   `}
   `,
 );

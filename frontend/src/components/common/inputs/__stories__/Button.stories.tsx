@@ -1,10 +1,10 @@
 import React from 'react';
 import Button, { ButtonProps } from 'components/common/inputs/Button';
 
-// TODO: Add onclick action
 const config = {
   title: 'Components/Common/Inputs/Button',
   component: Button,
+  argTypes: { onClick: { action: 'clicked' } },
 };
 
 function Template(props: ButtonProps) {
