@@ -8,7 +8,6 @@ describe('Button', () => {
     const title = 'some title';
     const children = <span>Children</span>;
 
-    // TODO: If only we could merge three arrays into one multi-dimensional.. Might need some new util function
     describe.each([
       ['button', 'contained', true],
       ['button', 'contained', false],
