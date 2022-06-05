@@ -4,7 +4,7 @@ import Tooltip from 'components/common/data/Tooltip';
 
 type ButtonType = 'button' | 'submit' | 'reset';
 
-type Variant = 'contained' | 'outlined' | 'text';
+type ButtonVariant = 'contained' | 'outlined' | 'text';
 
 type ButtonProps = {
   readonly children: React.ReactNode;
@@ -12,7 +12,7 @@ type ButtonProps = {
   readonly disabled?: boolean;
   readonly onClick?: React.MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>;
   readonly type?: ButtonType;
-  readonly variant?: Variant;
+  readonly variant?: ButtonVariant;
 };
 
 function Button({ title, children, onClick, disabled = false, type = 'button', variant = 'outlined' }: ButtonProps) {
@@ -37,7 +37,7 @@ const ButtonTypography = css(
   `,
 );
 
-const StyledButton = styled.button<{ readonly $variant: Variant; readonly $disabled: boolean }>(
+const StyledButton = styled.button<{ readonly $variant: ButtonVariant; readonly $disabled: boolean }>(
   ({ $variant, $disabled, theme }) => css`
     ${ButtonTypography};
     display: flex;
@@ -77,4 +77,4 @@ const StyledButton = styled.button<{ readonly $variant: Variant; readonly $disab
 );
 
 export default Button;
-export type { ButtonProps };
+export type { ButtonType, ButtonVariant, ButtonProps };
