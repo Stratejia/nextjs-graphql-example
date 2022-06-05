@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip Given title and children When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <span>
+    Children
+  </span>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;

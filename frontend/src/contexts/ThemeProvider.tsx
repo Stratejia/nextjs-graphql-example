@@ -1,6 +1,7 @@
 import React from 'react';
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components';
-import { getTheme, GlobalStyle } from 'styles';
+import GlobalStyle from 'styles/GlobalStyle';
+import { getTheme } from 'styles/theme';
 import { ThemeMode } from 'types/styles';
 
 const defaultMode = 'dark';
@@ -35,5 +36,9 @@ const ThemeContext = React.createContext<{
   readonly switchMode: () => void;
 }>({ mode: defaultMode, setMode: () => void 0, switchMode: () => void 0 });
 
+function useThemeContext() {
+  return React.useContext(ThemeContext);
+}
+
 export default ThemeProvider;
-export { defaultMode, ThemeContext };
+export { defaultMode, ThemeContext, useThemeContext };

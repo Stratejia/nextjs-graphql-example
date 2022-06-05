@@ -1,0 +1,415 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Given title and children Given button type, contained variant and false disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf iyuPKR"
+      disabled={false}
+      type="button"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
+
+exports[`Button Given title and children Given button type, contained variant and true disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf ewkPYO"
+      disabled={true}
+      type="button"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
+
+exports[`Button Given title and children Given button type, outlined variant and false disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf hKofOt"
+      disabled={false}
+      type="button"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
+
+exports[`Button Given title and children Given button type, outlined variant and true disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf ddzPCi"
+      disabled={true}
+      type="button"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
+
+exports[`Button Given title and children Given button type, text variant and false disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf kKsMWL"
+      disabled={false}
+      type="button"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
+
+exports[`Button Given title and children Given button type, text variant and true disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf gJJnHQ"
+      disabled={true}
+      type="button"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
+
+exports[`Button Given title and children Given reset type, contained variant and false disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf iyuPKR"
+      disabled={false}
+      type="reset"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
+
+exports[`Button Given title and children Given reset type, contained variant and true disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf ewkPYO"
+      disabled={true}
+      type="reset"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
+
+exports[`Button Given title and children Given reset type, outlined variant and false disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf hKofOt"
+      disabled={false}
+      type="reset"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
+
+exports[`Button Given title and children Given reset type, outlined variant and true disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf ddzPCi"
+      disabled={true}
+      type="reset"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
+
+exports[`Button Given title and children Given reset type, text variant and false disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf kKsMWL"
+      disabled={false}
+      type="reset"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
+
+exports[`Button Given title and children Given reset type, text variant and true disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf gJJnHQ"
+      disabled={true}
+      type="reset"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
+
+exports[`Button Given title and children Given submit type, contained variant and false disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf iyuPKR"
+      disabled={false}
+      type="submit"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
+
+exports[`Button Given title and children Given submit type, contained variant and true disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf ewkPYO"
+      disabled={true}
+      type="submit"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
+
+exports[`Button Given title and children Given submit type, outlined variant and false disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf hKofOt"
+      disabled={false}
+      type="submit"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
+
+exports[`Button Given title and children Given submit type, outlined variant and true disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf ddzPCi"
+      disabled={true}
+      type="submit"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
+
+exports[`Button Given title and children Given submit type, text variant and false disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf kKsMWL"
+      disabled={false}
+      type="submit"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
+
+exports[`Button Given title and children Given submit type, text variant and true disabled When rendering Then match snapshot 1`] = `
+<div
+  className="sc-gsnTZi eZrxQK"
+>
+  <div>
+    <button
+      className="sc-dkzDqf gJJnHQ"
+      disabled={true}
+      type="submit"
+    >
+      <span>
+        Children
+      </span>
+    </button>
+  </div>
+  <span
+    className="sc-bczRLJ gnxjFk"
+  >
+    some title
+  </span>
+</div>
+`;
