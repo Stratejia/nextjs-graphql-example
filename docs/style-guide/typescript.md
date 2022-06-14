@@ -200,7 +200,7 @@ Supported by linter: Yes, via
 [`import/exports-last`](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/exports-last.md)
 
 We should read script files (including JS/TS) as functions, with params (imports) and returned values (exports). This
-means files should always before with imports and end with exports.
+means files should always start with imports and end with exports.
 
 Separate declarations from exports.
 
