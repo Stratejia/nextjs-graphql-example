@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { create } from 'react-test-renderer';
-import { render, cleanup, fireEvent } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import ThemeProvider from 'contexts/ThemeProvider';
 import ThemeProviderChild from 'contexts/__stubs__/ThemeProviderChild';
 
@@ -17,50 +17,52 @@ describe('ThemeProvider', () => {
       });
     });
 
-    // TODO: See if this is necessary, we have multiple data-testid for some reason
-    afterEach(cleanup);
-    describe('Given no initial theme mode', () => {
-      const { getByTestId } = render(<ThemeProvider>{children}</ThemeProvider>);
+    describe('Given render', () => {
+      const { getByTestId, rerender } = render(<ThemeProvider>{children}</ThemeProvider>);
 
-      describe('When displaying theme mode', () => {
-        const mode = getByTestId('mode');
+      describe('Given no initial theme mode', () => {
+        rerender(<ThemeProvider>{children}</ThemeProvider>);
 
-        test('Then use dark mode', () => {
-          expect(mode.innerHTML).toBe('dark');
-        });
-      });
-    });
+        describe('When displaying theme mode', () => {
+          const mode = getByTestId('mode');
 
-    describe('Given initial theme mode', () => {
-      const initialMode = 'light';
-      const { getByTestId } = render(<ThemeProvider initialMode={initialMode}>{children}</ThemeProvider>);
-
-      describe('When displaying theme mode', () => {
-        const mode = getByTestId('mode');
-
-        test('Then use initial theme mode', () => {
-          expect(mode.innerHTML).toBe(initialMode);
+          test('Then use dark mode', () => {
+            expect(mode.innerHTML).toBe('dark');
+          });
         });
       });
 
-      describe('When setting theme and displaying theme mode', () => {
-        const setModeButton = getByTestId('setModeButton');
-        fireEvent.click(setModeButton);
-        const mode = getByTestId('mode');
+      describe('Given initial theme mode', () => {
+        const initialMode = 'light';
+        rerender(<ThemeProvider initialMode={initialMode}>{children}</ThemeProvider>);
 
-        test('Then set theme mode', () => {
-          expect(mode.innerHTML).toBe(modeToSet);
+        describe('When displaying theme mode', () => {
+          const mode = getByTestId('mode');
+
+          test('Then use initial theme mode', () => {
+            expect(mode.innerHTML).toBe(initialMode);
+          });
         });
-      });
 
-      describe('When switching theme and displaying theme mode', () => {
-        const modeToBeSwitched = 'dark';
-        const switchModeButton = getByTestId('switchModeButton');
-        fireEvent.click(switchModeButton);
-        const mode = getByTestId('mode');
+        describe('When setting theme and displaying theme mode', () => {
+          const setModeButton = getByTestId('setModeButton');
+          fireEvent.click(setModeButton);
+          const mode = getByTestId('mode');
 
-        test('Then switch theme mode', () => {
-          expect(mode.innerHTML).toBe(modeToBeSwitched);
+          test('Then set theme mode', () => {
+            expect(mode.innerHTML).toBe(modeToSet);
+          });
+        });
+
+        describe('When switching theme and displaying theme mode', () => {
+          const modeToBeSwitched = 'dark';
+          const switchModeButton = getByTestId('switchModeButton');
+          fireEvent.click(switchModeButton);
+          const mode = getByTestId('mode');
+
+          test('Then switch theme mode', () => {
+            expect(mode.innerHTML).toBe(modeToBeSwitched);
+          });
         });
       });
     });
