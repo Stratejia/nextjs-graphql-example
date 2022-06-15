@@ -1,12 +1,18 @@
 # Frontend
 
-For more info on UI components, see [associated doc](../development/components/index.md).
-
 ## Software architecture
 
 A simple Next.js (React) app built in TypeScript. File structure explains pretty well the software architecture.
 
 TODO: How the frontend communicates with the backend
+
+## UI Components
+
+UI Components are documented using via storybook.
+
+To run storybook locally, refer to `frontend`'s `README.md` file.
+
+TODO: Once Storybook is deployed, link it here.
 
 ## File structure
 
