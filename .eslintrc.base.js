@@ -25,7 +25,6 @@ module.exports = {
     'import/first': 'warn',
     'import/exports-last': 'warn',
     'functional/no-class': 'error',
-    'functional/no-var': 'error',
     'functional/no-let': 'error',
     'functional/no-return-void': 'off',
     'functional/no-expression-statement': 'off',
