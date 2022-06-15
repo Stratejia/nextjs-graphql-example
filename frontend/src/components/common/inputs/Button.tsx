@@ -17,9 +17,16 @@ type ButtonProps = {
 
 function Button({ title, children, onClick, disabled = false, type = 'button', variant = 'outlined' }: ButtonProps) {
   return (
-    <Tooltip title={title}>
+    <Tooltip title={title} data-testid="tooltip">
       <div>
-        <StyledButton type={type} $variant={variant} $disabled={disabled} onClick={onClick} disabled={disabled}>
+        <StyledButton
+          type={type}
+          $variant={variant}
+          $disabled={disabled}
+          onClick={onClick}
+          disabled={disabled}
+          data-testid="button"
+        >
           {children}
         </StyledButton>
       </div>

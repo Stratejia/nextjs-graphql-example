@@ -11,7 +11,7 @@ function Tooltip({ children, title }: TooltipProps) {
   return (
     <TooltipContainer>
       {children}
-      <TooltipText>{title}</TooltipText>
+      <TooltipText data-testid="tooltip-text">{title}</TooltipText>
     </TooltipContainer>
   );
 }
