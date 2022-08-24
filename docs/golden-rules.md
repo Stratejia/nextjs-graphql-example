@@ -1,6 +1,6 @@
 # Golden Rules
 
-1. To Hell with the `class` keyword, only use functional programming, at least within our codebase.
+1. Avoid using `class` and OO principles. Stick to functional programming, at least within our codebase.
 2. Document everything. If unsure, ask a teammate! Knowledge is power.
 3. Prefer `type` over `interface`.
 4. Without over-engineering, isolate UI libraries and icons into the `components` folder.
