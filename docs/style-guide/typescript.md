@@ -1,11 +1,11 @@
 # TypeScript
 
-## No. Damn. Classes.
+## No classes
 
 Supported by linter: Yes, via
 [`functional/no-class`](https://github.com/jonaskello/eslint-plugin-functional/blob/master/docs/rules/no-class.md)
 
-We keep this codebase FP-oriented, following the KISS principle. No classes should be present to avoid dealing with
+We keep this codebase FP-oriented and focused on the KISS principle. No classes should be present to avoid dealing with
 state induced problems (and just general FP preference).
 
 This codebase should only include functions and types. Nothing else.
