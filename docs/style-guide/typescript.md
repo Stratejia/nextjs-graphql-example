@@ -75,6 +75,8 @@ function makeAccountRepository() {
   function getAccounts() {
     return [];
   }
+  
+  return { getAccounts };
 }
 
 type AccountRepository = ReturnType<typeof makeAccountRepository>;
